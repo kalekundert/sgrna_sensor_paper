@@ -2,6 +2,9 @@ SLUG := sgrna_paper
 LATEX := xelatex --halt-on-error
 BIBER := biber
 
+PREAMBLE := \
+	preamble.tex
+
 FIGURES := \
 	figure_1/figure_1.pdf \
 	figure_2/figure_2.pdf \
@@ -11,7 +14,7 @@ FIGURES := \
 BIBLIOGRAPHIES := \
 	curated_refs.bib \
 
-sgrna_paper.pdf: $(SLUG).tex $(SLUG).bbl $(FIGURES) Makefile
+sgrna_paper.pdf: $(SLUG).tex $(SLUG).bbl $(PREAMBLE) $(FIGURES) Makefile
 	$(LATEX) $< 
 
 $(SLUG).bbl : $(BIBLIOGRAPHIES) Makefile

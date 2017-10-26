@@ -1,0 +1,64 @@
+\usepackage{array}
+\usepackage[autocite=superscript]{biblatex}
+\usepackage{booktabs}
+%\usepackage[margin=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{nopageno}
+\usepackage{tabularx}
+\usepackage{units}
+
+% Use the same font in the main text as in the figures.
+\usepackage{fontspec}
+\setmainfont{Liberation Sans}
+
+% Double space the draft.
+\usepackage{setspace}
+\doublespacing
+
+% Tell LaTeX where to find my figures.
+\graphicspath{
+ {figure_1/}
+ {figure_2/}
+ {figure_3/}
+ {figure_4/}
+}
+
+% Tell LaTeX where to find my bibliography.
+\addbibresource{curated_refs.bib}
+
+% Don't number sections.
+\setcounter{secnumdepth}{0}
+
+% Define a bunch of useful aliases.
+\newcommand\captitle{\textit}
+\newcommand\reffig[1]{Figure #1}
+\newcommand\reftab[1]{Table #1}
+\newcommand\seq[1]{\texttt{#1}}
+
+\newcommand\latin[1]{\emph{#1}}
+\newcommand\apo{\latin{apo}}
+\newcommand\holo{\latin{holo}}
+\newcommand\invitro{\latin{in vitro}}
+\newcommand\invivo{\latin{in vivo}}
+
+\newcommand\hr[1]{\unit[#1]{h}}
+\newcommand\mgml[1]{\unit[#1]{mg/mL}}
+\newcommand\minx[1]{\unit[#1]{min}}
+\newcommand\mm[1]{\unit[#1]{mM}}
+\newcommand\ngx[1]{\unit[#1]{ng}}
+\newcommand\ngul[1]{\unit[#1]{ng/μL}}
+\newcommand\nm[1]{\unit[#1]{nM}}
+\newcommand\px[1]{\unit[#1]{px}}
+\newcommand\ul[1]{\unit[#1]{μL}}
+\newcommand\um[1]{\unit[#1]{μM}}
+\newcommand\uul[1]{\unit[#1]{U/μL}}
+\newcommand\vcm[1]{\unit[#1]{V/cm}}
+
+\newcommand\beginsupplement{%
+   \setcounter{table}{0}
+   \renewcommand{\thetable}{S\arabic{table}}%
+   \setcounter{figure}{0}
+   \renewcommand{\thefigure}{S\arabic{figure}}%
+}
