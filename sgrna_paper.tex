@@ -1,4 +1,4 @@
-\documentclass[twocolumn]{article}
+\documentclass{article}
 
 \usepackage{array}
 \usepackage[autocite=superscript]{biblatex}
@@ -11,11 +11,15 @@
 \usepackage{tabularx}
 \usepackage{units}
 
-\addbibresource{curated_refs.bib}
-
+% Use the same font in the main text as in the figures.
 \usepackage{fontspec}
 \setmainfont{Liberation Sans}
 
+% Double space the draft.
+\usepackage{setspace}
+\doublespacing
+
+% Tell LaTeX where to find my figures.
 \graphicspath{
  {figure_1/}
  {figure_2/}
@@ -23,11 +27,16 @@
  {figure_4/}
 }
 
+% Tell LaTeX where to find my bibliography.
+\addbibresource{curated_refs.bib}
+
+% Don't number sections.
 \setcounter{secnumdepth}{0}
 
+% Define a bunch of useful aliases.
 \newcommand\captitle{\textit}
-\newcommand\reffig[1]{Figure \ref{#1}}
-\newcommand\reftab[1]{Table \ref{#1}}
+\newcommand\reffig[1]{Figure #1}
+\newcommand\reftab[1]{Table #1}
 \newcommand\seq[1]{\texttt{#1}}
 
 \newcommand\latin[1]{\emph{#1}}
@@ -58,61 +67,20 @@
 
 \begin{document}
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{figure_1}
- \caption{
-  \captitle{Rational design of ligand-sensitive sgRNAs}
-  (a) A schematic illustrating that our ligand-activated designs are meant to 
-  adopt the native sgRNA fold upon the addition of ligand, which then allows 
-  for the assembly of a functional Cas9 complex.
-  (b) A map of the sgRNA domains most relevant to this paper 
-  \autocite{briner2014}.
-  (c) The mechanism by which the theophylline aptamer can affect conformational 
-  change in an RNA device.  In the absence of ligand, the ends of the aptamer 
-  are unstructured.  In the presence of ligand, the ends come together to form 
-  a rigid stem-like structure \autocite{zimmerman1997}.
-  (d) \emph{In vitro} cleavage with and without theophylline for some of our 
-  strongest rational designs.  From left to right: Leaving Cas9 or sgRNA out of 
-  the reaction leads to no cleavage, and leaving DNA out of the reaction leads 
-  to no signal.  The positive and negative controls are unaffected by 
-  theophylline.  Design numbers refer to Table S1 and are color-coded by the 
-  domain in which the aptamer was inserted.  The percent cleavage values are 
-  the average of at least two experiments.  All data in the image is from a 
-  single gel, but several weaker designs were cropped.
-  (e) Theophylline titration for design \#55.  The theophylline concentration 
-  decreases by 2x in each step of the titration.
- }
- \label{fig1}
-\end{figure}
-
-\begin{table}
- \centering
- \resizebox{\columnwidth}{!}{\input{table_1/summary_tabular}}
- \caption{
-  \captitle{Summary of rational design results.}  The results are organized by 
-  the design strategy we employed and the domain the sgrNA was inserted into.  
-  We tested 97 designs and found 10 that were active, including at least one 
-  active design for each domain.  We considered a design active if it exhibited 
-  a >15% change in cleavage in response to theophylline; 15% is about the point 
-  at which the difference is clearly visible on a gel.
- }
- \label{tab1}
-\end{table}
-
 \section{Methods}
 
 \subsection{\latin{In vitro} Cas9 cleavage assay}
 
 \latin{In vitro} transcription: Linear, double-stranded template DNA was 
-acquired either by ordering gBlocks® Gene Fragments from IDT (\reffig{fig1}) or 
-by digesting plasmid DNA with EcoRI and HindIII (\reffig{fig2}).  Each 
-construct had the following T7 promoter --- \seq{TATAGTAATAATACGACTCACTATAG} 
---- and a spacer sequence that began with at least 3 G's.  The HiScribe™ T7 
-High Yield RNA Synthesis Kit from NEB (E2040S) was used to transcribe 
-\ngx{10-50} of DNA template, and the RNA Clean \& Concentrator™-25 spin columns 
-from Zymo (R1018) were used to remove unincorporated nucleotides.  The RNA was 
-diluted to \nm{1500} (as measured by NanoDrop) in nuclease-free water from 
-Ambion (9983), aliquoted, and stored at -80°C.  
+acquired either by ordering gBlocks® Gene Fragments from IDT (\reffig{1}) or by 
+digesting plasmid DNA with EcoRI and HindIII (\reffig{2}).  Each construct had 
+the following T7 promoter --- \seq{TATAGTAATAATACGACTCACTATAG} --- and a spacer 
+sequence that began with at least 3 G's.  The HiScribe™ T7 High Yield RNA 
+Synthesis Kit from NEB (E2040S) was used to transcribe \ngx{10-50} of DNA 
+template, and the RNA Clean \& Concentrator™-25 spin columns from Zymo (R1018) 
+were used to remove unincorporated nucleotides.  The RNA was diluted to 
+\nm{1500} (as measured by NanoDrop) in nuclease-free water from Ambion (9983), 
+aliquoted, and stored at -80°C.  
 
 Target DNA: Target DNA was prepared by using inverse PCR to clone the 
 appropriate target sequence into the pCR2.1 vector roughly across from the XmnI 
@@ -152,10 +120,43 @@ The response to ligand was calculated:
 
 Dolor sit amet.
 
+\section{Captions}
+
+\subsection{Figure 1}
+
+\captitle{Rational design of ligand-sensitive sgRNAs}
+(a) A schematic illustrating that our ligand-activated designs are meant to 
+adopt the native sgRNA fold upon the addition of ligand, which then allows 
+for the assembly of a functional Cas9 complex.
+(b) A map of the sgRNA domains most relevant to this paper 
+\autocite{briner2014}.
+(c) The mechanism by which the theophylline aptamer can affect conformational 
+change in an RNA device.  In the absence of ligand, the ends of the aptamer 
+are unstructured.  In the presence of ligand, the ends come together to form 
+a rigid stem-like structure \autocite{zimmerman1997}.
+(d) \emph{In vitro} cleavage with and without theophylline for some of our 
+strongest rational designs.  From left to right: Leaving Cas9 or sgRNA out of 
+the reaction leads to no cleavage, and leaving DNA out of the reaction leads 
+to no signal.  The positive and negative controls are unaffected by 
+theophylline.  Design numbers refer to Table S1 and are color-coded by the 
+domain in which the aptamer was inserted.  The percent cleavage values are 
+the average of at least two experiments.  All data in the image is from a 
+single gel, but several weaker designs were cropped.
+(e) Theophylline titration for design \#55.  The theophylline concentration 
+decreases by 2x in each step of the titration.
+
+\subsection{Table 1}
+
+\captitle{Summary of rational design results.}  The results are organized by 
+the design strategy we employed and the domain the sgrNA was inserted into.  We 
+tested 97 designs and found 10 that were active, including at least one active 
+design for each domain.  We considered a design active if it exhibited a >15\% 
+change in cleavage in response to theophylline; 15\% is about the point at 
+which the difference is clearly visible on a gel.
+
+
 \printbibliography[title=References]
 
 \beginsupplement
-
-\
 
 \end{document}
