@@ -2,6 +2,7 @@
 *.4tc
 *.aux
 *.bbl
+*.blg
 *.bcf
 *.lbg
 *.css
@@ -10,8 +11,14 @@
 *.idv
 *.lg
 *.log
-*.pdf
 *.run.xml
 *.tmp
 *.xref
 *.jpg
+
+/*.pdf
+/figure_*
+/table_*
+/supp_mat
+/fcm.sh
+/roadmap.txt
