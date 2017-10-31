@@ -1,13 +1,19 @@
+\usepackage{adjustbox}
 \usepackage{array}
+\usepackage{bbding}
 \usepackage[autocite=superscript]{biblatex}
+\usepackage{caption}
 \usepackage{booktabs}
-%\usepackage[margin=0.75in]{geometry}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{multirow}
-\usepackage{nopageno}
+\usepackage{seqsplit}
 \usepackage{tabularx}
 \usepackage{units}
+
+% Delimit paragraphs with newlines rather than spaces.
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
 
 % Use the same font in the main text as in the figures.
 \usepackage{fontspec}
@@ -32,29 +38,49 @@
 \setcounter{secnumdepth}{0}
 
 % Define a bunch of useful aliases.
-\newcommand\captitle{\textit}
-\newcommand\reffig[1]{Figure #1}
-\newcommand\reftab[1]{Table #1}
-\newcommand\seq[1]{\texttt{#1}}
+\newcommand\fwdrna{ligRNA\textsuperscript{+}}
+\newcommand\backrna{ligRNA\textsuperscript{−}}
+\newcommand\captitle[1]{\emph{#1}}
+\newcommand\seq[1]{\seqsplit{\texttt{#1}}}
 
 \newcommand\latin[1]{\emph{#1}}
+\newcommand\etal{\latin{et~al.}}
 \newcommand\apo{\latin{apo}}
+\newcommand\Apo{\latin{Apo}}
 \newcommand\holo{\latin{holo}}
+\newcommand\Holo{\latin{Holo}}
 \newcommand\invitro{\latin{in vitro}}
+\newcommand\Invitro{\latin{In vitro}}
 \newcommand\invivo{\latin{in vivo}}
+\newcommand\Invivo{\latin{In vivo}}
+\newcommand\ecoli{\latin{E.~coli}}
+\newcommand\yeast{\latin{S.~cerevisiae}}
 
-\newcommand\hr[1]{\unit[#1]{h}}
-\newcommand\mgml[1]{\unit[#1]{mg/mL}}
-\newcommand\minx[1]{\unit[#1]{min}}
-\newcommand\mm[1]{\unit[#1]{mM}}
+\newcommand\evts[1]{\unit[#1]{evt/s}}
+\newcommand\hour[1]{\unit[#1]{h}}
+\newcommand\g[1]{\unit[#1]{g}}
+\newcommand\kV[1]{\unit[#1]{kV}}
+\newcommand\liter[1]{\unit[#1]{liter}}
+\newcommand\mgmL[1]{\unit[#1]{mg/mL}}
+\newcommand\minute[1]{\unit[#1]{min}}
+\newcommand\mL[1]{\unit[#1]{mL}}
+\newcommand\mM[1]{\unit[#1]{mM}}
+\newcommand\molar[1]{\unit[#1]{M}}
+\newcommand\ms[1]{\unit[#1]{ms}}
 \newcommand\ngx[1]{\unit[#1]{ng}}
-\newcommand\ngul[1]{\unit[#1]{ng/μL}}
-\newcommand\nm[1]{\unit[#1]{nM}}
+\newcommand\nguL[1]{\unit[#1]{ng/μL}}
+\newcommand\nM[1]{\unit[#1]{nM}}
+\newcommand\pguL[1]{\unit[#1]{pg/μL}}
 \newcommand\px[1]{\unit[#1]{px}}
-\newcommand\ul[1]{\unit[#1]{μL}}
-\newcommand\um[1]{\unit[#1]{μM}}
-\newcommand\uul[1]{\unit[#1]{U/μL}}
-\newcommand\vcm[1]{\unit[#1]{V/cm}}
+\newcommand\rpm[1]{\unit[#1]{rpm}}
+\newcommand\ugmL[1]{\unit[#1]{μg/mL}}
+\newcommand\uL[1]{\unit[#1]{μL}}
+\newcommand\uM[1]{\unit[#1]{μM}}
+\newcommand\UuL[1]{\unit[#1]{U/μL}}
+\newcommand\Vcm[1]{\unit[#1]{V/cm}}
+
+\newcommand\namedcite[1]{\citeauthor*{#1}\autocite{#1}}
+
 
 \newcommand\beginsupplement{%
    \setcounter{table}{0}
@@ -62,3 +88,72 @@
    \setcounter{figure}{0}
    \renewcommand{\thefigure}{S\arabic{figure}}%
 }
+\newcommand{\fakecaption}{%
+  \vskip0.5\baselineskip
+  \refstepcounter{table}%
+  \tablename\ \thetable%
+}
+
+% Commands to define and reference figures and tables.
+\newcounter{mainfig}
+\newcommand\reffig[1]{%
+ Figure \ref{mainfig:#1}%
+}
+\newcommand\fig[1]{%
+ \refstepcounter{mainfig}%
+ \label{mainfig:#1}
+ \subsection{\reffig{#1}}
+}
+
+\newcounter{maintab}
+\newcommand\reftab[1]{%
+ Table \ref{maintab:#1}%
+}
+\newcommand\tab[1]{%
+ \refstepcounter{maintab}%
+ \label{maintab:#1}
+ \subsection{\reftab{#1}}
+}
+
+\newcounter{suppfig}
+\newcommand\refsuppfig[1]{%
+ Figure S\ref{suppfig:#1}%
+}
+\newcommand\suppfig[1]{%
+ \refstepcounter{suppfig}%
+ \label{suppfig:#1}
+ \subsection{\refsuppfig{#1}}
+}
+
+\newcounter{supptab}
+\newcommand\refsupptab[1]{%
+ Table S\ref{supptab:#1}%
+}
+\newcommand\supptab[1]{%
+ \refstepcounter{supptab}%
+ \label{supptab:#1}
+ \subsection{\refsupptab{#1}}
+}
+
+% Commands to format figures in tables in the proper amounts of space.
+\newcommand\figonecol[1]{%
+ \begin{center}
+  \includegraphics[width=3.46in]{#1}%
+ \end{center}
+}
+\newcommand\figtwocol[1]{%
+ \makebox[\textwidth][c]{\includegraphics[width=7in]{#1}}%
+}
+\newcommand\tabonecol[1]{%
+ \singlespacing%
+ \begin{adjustbox}{width=3.46in,center=\textwidth}%
+   \input{#1}%
+ \end{adjustbox}%
+}
+\newcommand\tabtwocol[1]{%
+ \singlespacing%
+ \begin{adjustbox}{width=7in,center=\textwidth}%
+   \input{#1}%
+ \end{adjustbox}%
+}
+

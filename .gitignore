@@ -14,11 +14,18 @@
 *.run.xml
 *.tmp
 *.xref
+
+*.svg
+*.ps
+*.eps
+*.tif
+*.xcf
+*.png
 *.jpg
+*.dna
 
 /*.pdf
-/figure_*
-/table_*
-/supp_mat
 /fcm.sh
-/roadmap.txt
+/paper.tex
+/sandbox
+/build

@@ -1,0 +1,47 @@
+*in vitro* data
+===============
+[ ] Results for 100 in vitro designs.
+
+    That was a screen.  I only did everything once, and I'm not going to go 
+    back and repeat it now.  I'll try to put this together and see how much 
+    effort it'll take.
+
+[ ] In vitro designs in vivo.
+
+    I have this data, but the 3 replicates were all done on the same day.  And 
+    they're done in the context of the standard sgRNA backbone, not the 
+    optimized one.  The context is fine; that's what the in vitro designs are.  
+    But the same-day replicates artificially lower the error bars, which is 
+    important for this figure, and make this data look much less noisy than all 
+    my other data.
+
+Bacterial data
+==============
+[ ] Populations during screens
+
+[ ] James' ligand matrix
+
+[ ] J23150 data
+
+[ ] double-target data
+
+[ ] Liu data
+
+[ ] ViennaRNA predictions
+
+[ ] Titration traces
+
+[ ] Good gel for 11,30,37 (any spacer; maybe d1?)
+
+Mammalian data
+==============
+[ ] Include both PDFs from Christof
+
+[ ] Also include my in vitro data?  I'd have to replicate it.  And do a better 
+    job making the RNA.
+
+Yeast data
+==========
+[ ] Don't have it, need to hassle Ben and Andrew for it.
+
+

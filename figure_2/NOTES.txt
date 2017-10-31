@@ -1,0 +1,6 @@
+Fig 1a is not really crucial to the point I want to make, which is that we used 
+directed evolution to get working sensors.   It's certainly important to know 
+what the system is, but I can describe that in the text and put this panel in 
+the supplement.  The thing I'd miss most is the introduction of G1, G2, R1, and 
+R2.  But that can also happen in the text or the caption, and you can still get 
+the main gist of the figure without them.

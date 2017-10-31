@@ -1,0 +1,13 @@
+\begin{tabular}{rll}
+\toprule
+\# &
+Domain &
+Sequence \\
+\midrule
+{% for i, row in df.iterrows() %}
+ {{ row.id }} &
+ {{ row.domain }} &
+ \verb|{{ row.sequence }}| \\
+{% endfor %}
+\bottomrule
+\end{tabular}

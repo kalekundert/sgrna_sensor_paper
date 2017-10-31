@@ -1,97 +1,239 @@
-\documentclass{article}
+\documentclass[10pt,oneside]{article}
 \input{preamble}
 \begin{document}
 
+\section{Abstract}
+
+\section{Introduction}
+
+\section{Results}
+
+\section{Discussion}
+
 \section{Methods}
 
-\subsection{\latin{In vitro} Cas9 cleavage assay}
+\subsection{Strains and media}
 
-\latin{In vitro} transcription: Linear, double-stranded template DNA was 
-acquired either by ordering gBlocks® Gene Fragments from IDT (\reffig{1}) or by 
-digesting plasmid DNA with EcoRI and HindIII (\reffig{2}).  Each construct had 
-the following T7 promoter --- \seq{TATAGTAATAATACGACTCACTATAG} --- and a spacer 
-sequence that began with at least 3 G's.  The HiScribe™ T7 High Yield RNA 
-Synthesis Kit from NEB (E2040S) was used to transcribe \ngx{10-50} of DNA 
-template, and the RNA Clean \& Concentrator™-25 spin columns from Zymo (R1018) 
-were used to remove unincorporated nucleotides.  The RNA was diluted to 
-\nm{1500} (as measured by NanoDrop) in nuclease-free water from Ambion (9983), 
-aliquoted, and stored at -80°C.  
+\subsection{\Invitro{} Cas9 cleavage assay}
+
+\Invitro{} transcription: Linear, double-stranded template DNA was acquired 
+either by ordering gBlocks® Gene Fragments from IDT (\reffig{1}) or by cloning 
+the desired sequence into a pUC vector and digesting it with with EcoRI and 
+HindIII (\reffig{2}).  Each construct had the following T7 promoter --- 
+\seq{TATAGTAATAATACGACTCACTATAG} --- and a spacer sequence that began with at 
+least 3 G's.  The HiScribe™ T7 High Yield RNA Synthesis Kit (NEB E2040S) was 
+used to transcribe \ngx{10-50} of DNA template, and the RNA Clean \& 
+Concentrator™-25 spin columns (Zymo R1018) were used to remove unincorporated 
+nucleotides.
 
 Target DNA: Target DNA was prepared by using inverse PCR to clone the 
-appropriate target sequence into the pCR2.1 vector roughly across from the XmnI 
-site (i.e. in the MCS).  The vector was then digested with XmnI from NEB 
-(R0194S): mix \ul{43.5} \ngul{≈500} miniprepped pCR2.1 DNA, \ul{5.0} 10x 
-CutSmart buffer, and \ul{1.5} \uul{20} XmnI; incubate at 37°C until no 
-uncleaved plasmid is detectable on a gel (usually \hr{1-2}); dilute to \nm{30}; 
-store at -20°C.  
+appropriate target sequence into the pCR2.1 vector roughly across from its XmnI 
+site (i.e.\ in the MCS).  The vector was then digested with XmnI (NEB R0194S) 
+as follows: mix \uL{43.5} \nguL{≈500} miniprepped pCR2.1 DNA, \uL{5.0} 10x 
+CutSmart buffer, and \uL{1.5} \UuL{20} XmnI; incubate at 37°C until no 
+uncleaved plasmid is detectable on a gel (usually \minute{30--60}); dilute to 
+\nM{30}; store at -20°C.  
 
-Cas9 reaction: Mix \ul{5.0} water or \mm{30} theophylline and \ul{1.5} \um{1.5}
-sgRNA; incubate at 95°C for \minx{3}, then at 4°C for \minx{1}; add \ul{5.48} 
-water, \ul{1.5} 10x Cas9 buffer, and \ul{0.02} \um{20} Cas9 (NEB, M0386T) via 
-master mix; incubate at room temperature for \minx{10}; add \ul{1.5} \nm{30} 
-target DNA; pipet to mix; incubate at 37°C for \hr{1}; add \ul{0.09} \mgml{20} 
-RNase~A (Sigma, R6148), \ul{0.09} \mgml{20} Proteinase~K (Denville, CB3210-5), 
-and \ul{2.82} 6x loading dye via master mix; incubate at 37°C for \minx{20}, 
-then at 55°C for \minx{20}; run the entire reaction (\ul{18}) on a 1\% 
-agarose/TAE/GelRed gel at \vcm{4.5} for \minx{70}.  The exposure time was 
-manually adjusted to be as long as possible without saturating any pixels.
+Cas9 reaction: We adapted the following protocol from \namedcite{briner2014}: 
+mix \uL{5.0} water or \mM{30} theophylline and \uL{1.5} \uM{1.5} sgRNA; 
+incubate at 95°C for \minute{3}, then at 4°C for \minute{1}; add \uL{5.48} water, 
+\uL{1.5} 10x Cas9 buffer, and \uL{0.02} \uM{20} Cas9 (NEB M0386T) via master 
+mix; incubate at room temperature for \minute{10}; add \uL{1.5} \nM{30} target 
+DNA; pipet to mix; incubate at 37°C for \hour{1}; add \uL{0.09} \mgmL{20} RNase~A 
+(Sigma R6148), \uL{0.09} \mgmL{20} Proteinase~K (Denville CB3210-5), and 
+\uL{2.82} 6x loading dye via master mix; incubate at 37°C for \minute{20}, then 
+at 55°C for \minute{20}; run the entire reaction (\uL{18}) on a 1\% 
+agarose/TAE/GelRed gel at \Vcm{4.5} for \minute{70}.
 
-Gel quantification: Open gel in ImageJ (1.51r); subtract the background with a 
-rolling ball radius of \px{50}; then analyze the gel bands as usual.  The 
-percent cleavage for each lane was calculated:
+Gel quantification: Band intensities were quantified using Fiji (1.51r).  The 
+background was subtracted from each image using a \px{50} rolling ball radius.  
+The fraction of DNA cleaved in each lane was calculated:
 
 \begin{displaymath}
  \mathrm{f} = \frac{\mathrm{pixels}_\mathrm{2kb}}{\mathrm{pixels}_\mathrm{4kb} 
  + \mathrm{pixels}_\mathrm{2kb}}
 \end{displaymath}
 
-The response to ligand was calculated: 
+The change in cleavage due to ligand was calculated: 
 
 \begin{displaymath}
  \mathrm{Δf} = \mathrm{f}_\mathrm{theo} - \mathrm{f}_\mathrm{apo}
 \end{displaymath}
 
-\subsection{\emph{In vivo} CRISPRi assay}
+\subsection{CRISPRi assay}
 
-Dolor sit amet.
+Strain: The strain used for all CRISPRi experiments was \ecoli{} MG1655 with 
+dCas9 and ChlorR on a p15A plasmid (pgRNA-bacteria, Addgene 44251), sgRNA and 
+AmpR on a pUC plasmid (pdCas9-bacteria, Addgene 44249), and sfGFP 
+\autocite{pedelacq2006}, mRFP \autocite{campbell2002}, and KanR chromosomally 
+integrated.  This strain was originally described by \namedcite{qi2013}
 
-\section{Captions}
+Flow cytometry: Overnight cultures were started from freshly picked colonies in 
+\mL{1} LB with \ugmL{100} carbenicillin and \ugmL{35} chloramphenicol.  The 
+next morning, day cultures were started in \mL{15} culture tubes or 24-well 
+blocks by inoculating \uL{4} of saturated overnight culture into \mL{1} EZ Rich 
+Defined Medium (Teknova M2105) with 0.1\% glucose, \ugmL{1} 
+an\-hydro\-tetra\-cycline, \ugmL{100} carbenicillin, \ugmL{35} chloramphenicol, 
+and either \mM{1} theophylline or not.  These cultures were then grown for 8h 
+at 37°C with shaking at \rpm{225} before GFP and RFP fluorescence were measured 
+using a BD LSRII flow cytometer.  Approximately \unit[10,000]{events} were 
+recorded for each measurement.  Biological replicates were done on different 
+days using different colonies from the same transformation.
 
-\subsection{Figure 1}
+Data analysis: Cell distributions were obtained by computing a Gaussian kernel 
+density estimation (KDE) over the base-10 logarithms of the measured 
+fluorescence values.  The mode was considered to be the center of each 
+distribution (e.g.\ for determining fold changes) and was obtained through the 
+BFGS maximization of the KDE.
 
-\captitle{Rational design of ligand-sensitive sgRNAs}
-(a) A schematic illustrating that our ligand-activated designs are meant to 
-adopt the native sgRNA fold upon the addition of ligand, which then allows 
-for the assembly of a functional Cas9 complex.
-(b) A map of the sgRNA domains most relevant to this paper 
-\autocite{briner2014}.
-(c) The mechanism by which the theophylline aptamer can affect conformational 
-change in an RNA device.  In the absence of ligand, the ends of the aptamer 
-are unstructured.  In the presence of ligand, the ends come together to form 
-a rigid stem-like structure \autocite{zimmerman1997}.
-(d) \emph{In vitro} cleavage with and without theophylline for some of our 
-strongest rational designs.  From left to right: Leaving Cas9 or sgRNA out of 
-the reaction leads to no cleavage, and leaving DNA out of the reaction leads 
-to no signal.  The positive and negative controls are unaffected by 
-theophylline.  Design numbers refer to Table S1 and are color-coded by the 
-domain in which the aptamer was inserted.  The percent cleavage values are 
-the average of at least two experiments.  All data in the image is from a 
-single gel, but several weaker designs were cropped.
-(e) Theophylline titration for design \#55.  The theophylline concentration 
-decreases by 2x in each step of the titration.
+\subsection{FACS screen}
 
-\subsection{Table 1}
+Library cloning: Randomized regions were inserted into the sgRNA using inverse 
+PCR with phosphate-modified and HPLC-purified primers containing degenerate 
+nucleotides.  The PCR and ligation reactions were setup as follows: mix 
+\uL{19.0} water, \uL{2.5} \uM{5} forward primer, \uL{2.5} \uM{5} reverse 
+primer, \uL{1.0} \pguL{100} template DNA and \uL{25.0} Q5® High-Fidelity 2x 
+Master Mix (NEB M0492L); run PCR according to NEB's recommendations, with a 
+\minute{2} extension time and an annealing temperature around 60°C; add \uL{1} 
+\UuL{20} DpnI (NEB R0176L); incubate at 37°C for \hour{1}; purify using QIAquick 
+spin columns (Qiagen 28106) and elute in \uL{50} water; add \uL{5.67} 10x T4 
+ligase buffer and \uL{1} \UuL{400} T4 ligase (NEB M0202L); incubate overnight 
+at 16°C; load the ligated DNA onto Zymoclean™ spin columns (Zymo D4002) and 
+elute in \uL{10} water to desalt and concentrate it.
 
-\captitle{Summary of rational design results.}  The results are organized by 
-the design strategy we employed and the domain the sgrNA was inserted into.  We 
-tested 97 designs and found 10 that were active, including at least one active 
-design for each domain.  We considered a design active if it exhibited a >15\% 
-change in cleavage in response to theophylline; 15\% is about the point at 
-which the difference is clearly visible on a gel.
+Electrotransformation: Electrocompetent cells were prepared as follows: make 
+``low-salt'' SOB media: \g{20} bacto-tryptone, \g{5} bacto-yeast extract, 
+\mL{2} \molar{5} NaCl, \uL{833.3} \molar{3} KCl, water to 1L, pH to 7.0 with 
+NaOH, autoclave 30 min at 121°C; pick a fresh colony and grow overnight in 
+\mL{1} SOB; in the morning, inoculate \liter{1} SOB with the entire overnight 
+culture; grow at 37°C with shaking at \rpm{225} until OD=0.4 (\hour{≈4}); place 
+cells in an ice bath for 10 min to quickly stop their growth; wash with 400 mL 
+pre-chilled water, then 200 mL pre-chilled water, then 200 mL pre-chilled 10\% 
+glycerol; resuspend in a total volume of \mL{6} pre-chilled 10\% glycerol; make 
+\uL{100} aliquots; flash-freeze and store at -80°C.  Electrocompetent cells 
+were transformed as follows: thaw competent cells on ice for \minute{10}; pipet 
+once to mix cells with \uL{2} \nguL{≈250} library plasmid; shock at \kV{1.8}
+with a \ms{5} decay time; immediately add \mL{1} pre-warmed SOC; recover at 
+37°C for \hour{1}; dilute into selective liquid media and grow at 37°C with 
+shaking at \rpm{225} overnight.  After PCR and ligation, libraries were first 
+transformed into electrocompetent Top10 cells, then mira-prepped 
+\autocite{pronobis2016}, sequenced, and combined as necessary, then transformed 
+again into electrocompetent MG1655 cells already harboring the dCas9 plasmid.
 
+Sorting: Cells were grown as for the CRISPRi assay, but when starting new  
+cultures, care was taken to subculture at least 10x more cells than the size of 
+the library (often \uL{200}).  Sorting was done using a BD FACSAria II cell 
+sorter.  Sorting was no slower than \evts{1000} and no faster than 
+\evts{20,000}, with the slower speeds being more accurate and the faster speeds 
+being necessary to sort large libraries.  Gates were drawn based on the 
+position of the wildtype population if possible, and based on the most extreme 
+library members otherwise.  All gates were drawn diagonally in GFP vs.\ RFP 
+space.  Sorted cells were collected in \mL{1} SOC and, after sorting, were 
+diluted into selective media and grown at 37°C with shaking at \rpm{225} 
+overnight.
+
+Screening for \backrna{}: Libraries are as in \refsupptab{libraries}
+
+
+\section{Figures}
+
+\fig{1}
+
+ \figonecol{figure_1}
+
+ \captitle{Rational design of ligand-sensitive sgRNAs}
+ %
+ (a) A schematic illustrating that our ligand-activated designs are meant to 
+ adopt the native sgRNA fold upon the addition of ligand, which then allows 
+ for the assembly of a functional Cas9 complex.
+ %
+ (b) A map of the sgRNA domains most relevant to this paper 
+ \autocite{briner2014}.
+ %
+ (c) The mechanism by which the theophylline aptamer can affect conformational 
+ change in an RNA device.  In the absence of ligand, the ends of the aptamer 
+ are unstructured.  In the presence of ligand, the ends come together to form 
+ a rigid stem-like structure \autocite{zimmerman1997}.
+ %
+ (d) \emph{In vitro} cleavage with and without theophylline for some of our 
+ strongest rational designs.  From left to right: Leaving Cas9 or sgRNA out of 
+ the reaction leads to no cleavage, and leaving DNA out of the reaction leads 
+ to no signal.  The positive and negative controls are unaffected by 
+ theophylline.  Design numbers refer to \refsupptab{rational-designs}
+ and are color-coded by the domain in which the aptamer was inserted.  The 
+ percent cleavage values are the average of at least two experiments.  All data 
+ in the image is from a single gel, but several weaker designs were cropped.
+ %
+ (e) Theophylline titration for design \#55.  The theophylline concentration 
+ decreases by 2x in each step of the titration.
+
+\fig{2}
+
+ \figtwocol{figure_2}
+
+ \captitle{Robust ligRNAs identified by \invivo{} screen}
+
+\fig{3}
+
+ \figonecol{figure_3}
+
+ \captitle{Parallel control with two ligands}
+
+\section{Tables}
+
+\tab{1}
+
+ \tabonecol{table_1/summary_tabular}
+
+ \captitle{Summary of rational design results.}  The results are organized by 
+ the design strategy we employed and the domain the sgrNA was inserted into.  
+ We tested 97 designs and found 10 that were active, including at least one 
+ active design for each domain.  We considered a design active if it exhibited 
+ a >15\% change in cleavage in response to theophylline; 15\% is about the 
+ point at which the difference is clearly visible on a gel.
+
+\section{Supplementary Materials}
+
+\supptab{rational-designs}
+
+ \tabtwocol{supp_mat/rational_design_sequences}
+
+ \captitle{Complete results from the \invitro{} screen of rational designs.}  
+ %
+ \#: The number used to refer to a rational design in the main text.
+ %
+ Strategy: The mechanism by which the design was intended to work.  "Stem 
+ Replacement" means a stem in the sgRNA was simply replaced with by the aptamer 
+ (possibly with a linker).  "Induced dimerization" means the sgRNA was slit in 
+ half, with each half getting part of the aptamer, in the hope that the two 
+ halves would dimerize in the presence of ligand.  "Strand displacement" means 
+ that we designed strands that could base pair in two ways --- one with wildtype 
+ sgRNA 2° structure and the other somehow different --- in the hope that the 
+ aptamer would trigger a switch between the two conformations.
+ %
+ Domain: Where in the sgRNA the aptamer was inserted.  
+ %
+ Cleavage: The percent of DNA that was cleaved by a design in the \invitro{} 
+ assay.  The \apo{} and \holo{} columns refer to the cleavage with and without 
+ theophylline, respectively, the Δ column is the difference between those, and 
+ the σ column is the standard deviation of the Δ values for the designs with 
+ more than one replicate.  All the percentages are rounded to the nearest 1.
+ %
+ N: The number of replicates for each design.  The reported percentages are the 
+ average of each replicate.
+ %
+ Active: We considered a design to be acitve if it exhibited a >15\% change in 
+ cleavage in response to ligand.  15\% is about the point at which the 
+ difference is clearly visible on a gel.
+ %
+ Sequence: The sequence of the design, including the spacer.
+
+\supptab{libraries}
+
+ \tabtwocol{supp_mat/library_sequences/library_tabular}
+
+ Hello world.
 
 \printbibliography[title=References]
-
-\beginsupplement
 
 \end{document}
