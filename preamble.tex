@@ -145,15 +145,17 @@
  \makebox[\textwidth][c]{\includegraphics[width=7in]{#1}}%
 }
 \newcommand\tabonecol[1]{%
- \singlespacing%
+ {\singlespacing%
  \begin{adjustbox}{width=3.46in,center=\textwidth}%
    \input{#1}%
  \end{adjustbox}%
+ }
 }
 \newcommand\tabtwocol[1]{%
- \singlespacing%
+ {\singlespacing%
  \begin{adjustbox}{width=7in,center=\textwidth}%
    \input{#1}%
  \end{adjustbox}%
+ }
 }
 
