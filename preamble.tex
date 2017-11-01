@@ -81,19 +81,6 @@
 
 \newcommand\namedcite[1]{\citeauthor*{#1}\autocite{#1}}
 
-
-\newcommand\beginsupplement{%
-   \setcounter{table}{0}
-   \renewcommand{\thetable}{S\arabic{table}}%
-   \setcounter{figure}{0}
-   \renewcommand{\thefigure}{S\arabic{figure}}%
-}
-\newcommand{\fakecaption}{%
-  \vskip0.5\baselineskip
-  \refstepcounter{table}%
-  \tablename\ \thetable%
-}
-
 % Commands to define and reference figures and tables.
 \newcounter{mainfig}
 \newcommand\reffig[1]{%
