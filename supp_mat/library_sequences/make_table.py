@@ -52,7 +52,7 @@ def render_template(df, path):
             trim_blocks=True,
             lstrip_blocks=True,
     )
-    template = env.get_template(f'{path}.jinja')
+    template = env.get_template(f'jinja_{path}')
     template.stream(df=df).dump(path)
 
 def xelatex(path):
