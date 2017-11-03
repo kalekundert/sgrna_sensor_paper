@@ -17,7 +17,12 @@
 
 % Use the same font in the main text as in the figures.
 \usepackage{fontspec}
-\setmainfont{Liberation Sans}
+\setmainfont[
+Path=fonts/,
+BoldFont=LiberationSans-Bold.ttf,
+ItalicFont=LiberationSans-Italic.ttf,
+BoldItalicFont=LiberationSans-BoldItalic.ttf]
+{LiberationSans-Regular.ttf}
 
 % Double space the draft.
 \usepackage{setspace}

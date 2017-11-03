@@ -1,5 +1,5 @@
 BUILD := build
-SLUG := sgrna_paper
+SLUG := main
 LATEX := xelatex --halt-on-error --output-directory build
 BIBER := biber --output-directory build
 
