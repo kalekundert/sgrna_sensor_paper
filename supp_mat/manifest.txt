@@ -1,12 +1,14 @@
 *in vitro* data
 ===============
 [ ] Results for 100 in vitro designs.
+    \refsuptab{rational-designs}
 
     That was a screen.  I only did everything once, and I'm not going to go 
     back and repeat it now.  I'll try to put this together and see how much 
     effort it'll take.
 
 [ ] In vitro designs in vivo.
+    \refsupfig{in-vitro-in-vivo}
 
     I have this data, but the 3 replicates were all done on the same day.  And 
     they're done in the context of the standard sgRNA backbone, not the 
@@ -17,19 +19,28 @@
 
 Bacterial data
 ==============
+[ ] Library sequences
+    \refsubtab{libraries}
+
 [ ] Good gel for 11,30,37 (any spacer; maybe d1?)
+    \refsupfig{ligrna-in-vitro}
 
 [ ] J23150 data
+    \refsupfig{j23150}
 
 [ ] James' ligand matrix
+    \refsupfig{ligand-matrix}
 
 Mechanism data
 ==============
 [ ] ViennaRNA predictions
+    \refsupfig{vienna}
 
 [ ] Mutagenesis
+    \refsupfig{mutagenesis}
 
 [ ] SHAPE-Seq data
+    \refsupfig{shape-seq}
 
 Mammalian data
 ==============

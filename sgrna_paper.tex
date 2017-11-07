@@ -4,12 +4,21 @@
 \begin{document}
 
 \title{Controlling Cas9 with ligand-activated and ligand-deactivated sgRNAs}
-\author{Kale Kundert, James Lucas, Kyle E. Watters, Christina M. Fitzsimmons, Benjamin L. Oakes, Christof Fellman, Andrew H. Ng, Ben M. Heineike, David F. Savage, Jennifer A. Doudna, Hana El-Samad, Tanja Kortemme}
+\author{
+Kale Kundert, James Lucas, Kyle E. Watters, Christina M. Fitzsimmons,\\
+Benjamin L. Oakes, Christof Fellman, Andrew H. Ng, Ben M. Heineike,\\
+David F. Savage, Jennifer A. Doudna, Hana El-Samad, Tanja Kortemme}
 \maketitle{}
 
 % A Brief Communication is a more concise format used typically to report a significant improvement to a tried-and-tested method, its modification and adaptation to an important original application, or an important new tool or resource of broad interest for the scientific community. This format typically does not exceed 3 printed pages. Brief Communications begin with a brief unreferenced abstract (3 sentences, no more than 70 words), which will appear on Medline. The title is limited to 10 words (or 90 characters). The main text is typically 1,000-1,500 words, including the abstract and contains no headings with the exception of a single heading for Methods to point readers to the online Methods section providing all technical details necessary for the independent reproduction of the methodology. Brief Communications normally have no more than 2 display items, although this may be flexible at the discretion of the editor, provided the page limit is observed. As a guideline, Brief Communications allow up to 20 references, and article titles are omitted from the reference list.
 
 \section{Abstract}
+
+\section{Acronyms}
+FACS: Fluorescence activated cell sorting
+GFP: Green fluorescent protein
+RFP: Red fluorescent protein
+CRISPRi: Clustered regularly interspaced short palindromic repeat inhibition
 
 \section{Introduction}
 
@@ -27,9 +36,12 @@
 
 %¶ All three solvent-exposed stems can be used to control the sgRNA (Fig 1b,1d,1e, Supp Tab [rational designs]).  Not enough to simply replace the stem.
 
-We began by quickly screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn which of the sgRNA stems were most sensitive to the presence of an aptamer, and which strategies for linking the aptamer to the sgRNA were most effective.  
+We began by quickly screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn insertion sites were most sensitive to the presence of an aptamer, and which strategies for linking the aptamer to the sgRNA were most effective.  Regarding insertion sites, we tried inserting the aptamer into each of the stems in \reffig{1}b, which are all solvent-exposed in the crystal structure of Cas9 in complex with sgRNA and DNA \autocite{nishimasu2014}.  Regarding linking strategies, we tried naively replacing different parts of each stem with the aptamer, splitting the sgRNA in half and using the aptamer to bring the halves together, and designing specific strand displacements for the \apo{} and \holo{} states.  We found functional sensors for all three insertion sites, and were most successful with the strand displacement strategy (\reffig{1}d, \refsuptab{rational-designs}).  All of these sensors could be titrated (\reffig{1}e).  We also unexpectedly learned that inserting the aptamer into the nexus region yields sensors that respond to the absence of ligand, rather than to the presence of it.  Knowing how to design both ligand-activated and ligand-deactivated sgRNAs \invitro{}, we next sought to find sensors that would function robustly \invivo{}.
 
 %¶ We did a FACS screen to find linker sequences that would work well (Fig 2a,2b,2c, Supp Fig [in vitro in vivo]).
+
+We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only very weak activity in the CRISPRi assay (\refsupfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsuptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of ligand.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Without it, most of the sensors we isolated were specific for the spacer used in the screen.  Our screen ultimately produced a number of ligand-sensitive, spacer-independent sgRNAs, which we call ligRNAs.  We picked the most robust ligand-activated sensor (ligRNA⁺; i.e. active in the + ligand state) and ligand-deactivated sensor (ligRNA⁻; i.e. active in the − ligand state) to further characterize.  With a spacer that was not used in any of the screns, both sensors have >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
+
 
 %¶ Our designs are spacer-independent (Fig 2d, Supp Fig [good-gel]).
 
@@ -124,7 +136,7 @@ Screening for \ligrnaB{}: Libraries are as in \refsupptab{libraries}
 
  \captitle{Robust ligRNAs identified by \invivo{} screen}
  %
- (a) A schematic of the screen used to isolate \ligrnaF{}.  The numbers above the arrows indicate approximate library sizes at each step.  G1, G2, R1, and R2 refer to different spacers targeting GFP and RFP, respectively.
+ (a) A schematic of the screen used to isolate \ligrnaF{}.  The numbers above the arrows indicate approximate library sizes at each step.  G1, G2, R1, and R2 refer to the first and second spacers targeting GFP and RFP, respectively.
  (b,c) Single-cell fluorescence distributions for \ligrnaF{} (teal) and \ligrnaB{} (navy) with (solid lines) and without (dashed lines) theophylline.  Control distributions are in grey.  The mode of each distribution is indicated with a plus sign.  Fluorescence values for each cell are normalized by GFP fluorescence for that cell and the modes of the un-repressed control populations measured for that replicate.
  (d) \Invitro{} cleavage data for both ligRNAs in the context of 24 randomly chosen spacers.  The colors indicate the change in the percent of DNA cleaved with and without theophylline.  Each box represents the mean of three measurements with a single spacer.   The grey error bar in the color scale shows the mean and standard deviation for 143 control measurements.
  (e) \Invivo{} theophylline titration for both ligRNAs.  The fluorescence axis is the same as in (b) and (c).
