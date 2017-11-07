@@ -17,31 +17,31 @@
 
 Bacterial data
 ==============
-[ ] Populations during screens
-
-[ ] James' ligand matrix
+[ ] Good gel for 11,30,37 (any spacer; maybe d1?)
 
 [ ] J23150 data
 
-[ ] double-target data
+[ ] James' ligand matrix
 
-[ ] Liu data
-
+Mechanism data
+==============
 [ ] ViennaRNA predictions
 
-[ ] Titration traces
+[ ] Mutagenesis
 
-[ ] Good gel for 11,30,37 (any spacer; maybe d1?)
+[ ] SHAPE-Seq data
 
 Mammalian data
 ==============
 [ ] Include both PDFs from Christof
 
-[ ] Also include my in vitro data?  I'd have to replicate it.  And do a better 
-    job making the RNA.
-
 Yeast data
 ==========
 [ ] Don't have it, need to hassle Ben and Andrew for it.
 
+On the fence
+============
+[ ] Liu data
+
+[ ] Populations during screens
 
