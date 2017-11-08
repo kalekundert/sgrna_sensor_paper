@@ -4,10 +4,23 @@
 \begin{document}
 
 \title{Controlling Cas9 with ligand-activated and ligand-deactivated sgRNAs}
-\author{
-Kale Kundert, James Lucas, Kyle E. Watters, Christina M. Fitzsimmons,\\
-Benjamin L. Oakes, Christof Fellman, Andrew H. Ng, Ben M. Heineike,\\
-David F. Savage, Jennifer A. Doudna, Hana El-Samad, Tanja Kortemme}
+\author[1]{Kale Kundert}
+\author[1]{James Lucas}
+\author[2]{Kyle E. Watters}
+\author[1]{Christina M. Fitzsimmons}
+\author[2]{Benjamin L. Oakes}
+\author[2]{Christof Fellman}
+\author[3]{Andrew H. Ng}
+\author[3]{Ben M. Heineike}
+\author[2]{David F. Savage}
+\author[2]{Jennifer A. Doudna}
+\author[3]{Hana El-Samad}
+\author[1]{Tanja Kortemme}
+\affil[1]{UCSF}
+\affil[2]{UCB}
+\affil[3]{UCSF}
+\date{}
+
 \maketitle{}
 
 % A Brief Communication is a more concise format used typically to report a significant improvement to a tried-and-tested method, its modification and adaptation to an important original application, or an important new tool or resource of broad interest for the scientific community. This format typically does not exceed 3 printed pages. Brief Communications begin with a brief unreferenced abstract (3 sentences, no more than 70 words), which will appear on Medline. The title is limited to 10 words (or 90 characters). The main text is typically 1,000-1,500 words, including the abstract and contains no headings with the exception of a single heading for Methods to point readers to the online Methods section providing all technical details necessary for the independent reproduction of the methodology. Brief Communications normally have no more than 2 display items, although this may be flexible at the discretion of the editor, provided the page limit is observed. As a guideline, Brief Communications allow up to 20 references, and article titles are omitted from the reference list.
@@ -40,7 +53,7 @@ We began by quickly screening 97 rational designs using an \invitro{} Cas9 cleav
 
 %¶ We did a FACS screen to find linker sequences that would work well (Fig 2a,2b,2c, Supp Fig [in vitro in vivo]).
 
-We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only very weak activity in the CRISPRi assay (\refsuppfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsupptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of ligand.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Without it, most of the sensors we isolated were specific for the spacer used in the screen.  Our screen ultimately produced a number of ligand-sensitive, spacer-independent sgRNAs, which we call ligRNAs.  We picked the most robust ligand-activated sensor (ligRNA⁺; i.e. active in the + ligand state) and ligand-deactivated sensor (ligRNA⁻; i.e. active in the − ligand state) to further characterize.  With a spacer that was not used in any of the screns, both sensors have >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
+We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only very weak activity in the CRISPRi assay (\refsuppfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsupptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of ligand.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Without it, most of the sensors we isolated were specific for the spacer used in the screen.  Our screen ultimately produced a number of ligand-sensitive, spacer-independent sgRNAs, which we call ligRNAs.  We picked the most robust ligand-activated sensor (\ligrnaF{}; i.e. active in the + ligand state) and ligand-deactivated sensor (\ligrnaB{}; i.e. active in the − ligand state) to further characterize.  With a spacer that was not used in any of the screns, both sensors have >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
 
 
 %¶ Our designs are spacer-independent (Fig 2d, Supp Fig [good-gel]).
