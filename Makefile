@@ -1,7 +1,7 @@
 BUILD := build
 SLUG := sgrna_paper
-LATEX := xelatex --halt-on-error --output-directory build
-BIBER := biber --output-directory build
+LATEX := xelatex --halt-on-error --output-directory $(BUILD)
+BIBER := biber --output-directory $(BUILD)
 
 PREAMBLE := \
 	preamble.tex
