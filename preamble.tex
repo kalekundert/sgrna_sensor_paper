@@ -39,6 +39,7 @@ BoldItalicFont = *-BoldItalic]
 
 % Tell LaTeX where to find my bibliography.
 \addbibresource{curated_refs.bib}
+\addbibresource{uncurated_refs.bib}
 
 % Don't number sections.
 \setcounter{secnumdepth}{0}
@@ -48,6 +49,7 @@ BoldItalicFont = *-BoldItalic]
 \newcommand\ligrnaB{ligRNA\textsuperscript{−}}
 \newcommand\captitle[1]{\emph{#1}}
 \newcommand\seq[1]{\seqsplit{\texttt{#1}}}
+\newcommand\code[1]{\texttt{#1}}
 
 \newcommand\latin[1]{\emph{#1}}
 \newcommand\etal{\latin{et~al.}}
@@ -62,9 +64,11 @@ BoldItalicFont = *-BoldItalic]
 \newcommand\ecoli{\latin{E.~coli}}
 \newcommand\yeast{\latin{S.~cerevisiae}}
 
+\newcommand\bp[1]{\unit[#1]{bp}}
 \newcommand\evts[1]{\unit[#1]{evt/s}}
-\newcommand\hour[1]{\unit[#1]{h}}
 \newcommand\g[1]{\unit[#1]{g}}
+\newcommand\hour[1]{\unit[#1]{h}}
+\newcommand\kcalmol[1]{\unit[#1]{kcal/mol}}
 \newcommand\kV[1]{\unit[#1]{kV}}
 \newcommand\liter[1]{\unit[#1]{liter}}
 \newcommand\mgmL[1]{\unit[#1]{mg/mL}}
@@ -73,8 +77,9 @@ BoldItalicFont = *-BoldItalic]
 \newcommand\mM[1]{\unit[#1]{mM}}
 \newcommand\molar[1]{\unit[#1]{M}}
 \newcommand\ms[1]{\unit[#1]{ms}}
-\newcommand\ngx[1]{\unit[#1]{ng}}
 \newcommand\nguL[1]{\unit[#1]{ng/μL}}
+\newcommand\ngx[1]{\unit[#1]{ng}}
+\newcommand\nt[1]{\unit[#1]{nt}}
 \newcommand\nM[1]{\unit[#1]{nM}}
 \newcommand\pguL[1]{\unit[#1]{pg/μL}}
 \newcommand\px[1]{\unit[#1]{px}}

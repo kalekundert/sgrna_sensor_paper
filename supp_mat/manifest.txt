@@ -23,7 +23,10 @@ Bacterial data
     \refsubtab{libraries}
 
 [ ] Good gel for 11,30,37 (any spacer; maybe d1?)
-    \refsupfig{ligrna-in-vitro}
+    \refsupfig{spacer-gel}
+
+[ ] Correlation between spacer/aptamer affinity and function
+    \refsuppfig{affinity-correlation}
 
 [ ] J23150 data
     \refsupfig{j23150}

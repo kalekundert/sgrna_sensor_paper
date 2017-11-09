@@ -53,13 +53,15 @@ We began by quickly screening 97 rational designs using an \invitro{} Cas9 cleav
 
 %¶ We did a FACS screen to find linker sequences that would work well (Fig 2a,2b,2c, Supp Fig [in vitro in vivo]).
 
-We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only very weak activity in the CRISPRi assay (\refsuppfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsupptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of ligand.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Without it, most of the sensors we isolated were specific for the spacer used in the screen.  The most robust ligand-activated sensor (\ligrnaF{}; i.e. sgRNA that's active in the + ligand state) and ligand-deactivated sensor (\ligrnaB{}; i.e. sgRNA that's active in the − ligand state) that we isolated are shown in \reffig{2}b,c.  With a spacer that was not used in any of the screens, both sensors have a >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
+We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only very weak activity in the CRISPRi assay (\refsuppfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsupptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of ligand.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Before we began doing that, most of the sensors we isolated were specific for the spacer used in the screen.  The most robust ligand-activated sensor (\ligrnaF{}; i.e. sgRNA that's active in the + ligand state) and ligand-deactivated sensor (\ligrnaB{}; i.e. sgRNA that's active in the − ligand state) that we isolated are shown in \reffig{2}b,c.  With a spacer that was not used in any of the screens, both sensors have a >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
 
-%¶ Our designs are spacer-independent (Fig 2d, Supp Fig [good-gel]).
+%¶ Our designs are spacer-independent (Fig 2d, Supp Fig [spacer-gel], Supp Fig [).
 
-
+Because RNA devices are known to be influenced by the sequences surrounding them [cite: some paper that talks about buffering RNA devices], we tested \ligrnaF{} and \ligrnaB{} in the context of 24 randomly chosen spacers using our \invitro{} Cas9 cleavage assay (\reffig{2}d).  One of the gels for the top-left spacer is shown for perspective (\refsuppfig{spacer-gel}).  Both sensors respond to ligand for the majority of the tested spacers.  We predicted the affinity between each spacer and the aptamer plus its linker for both ligRNAs to test the hypothesis that base-pairing with the aptamer could explain why the minority of spacers are detrimental to function (\refsuppfig{affinity-correlation}).  For \ligrnaF{} the correlation is weak, but for the \ligrnaB{} it seems prudent to choose spacers with weaker than \kcalmol{-15} predicted affinity.  These results suggest that these ligRNAs should be capable of regulating most genes, especially those containing multiple PAMs.
 
 %¶ Our designs can be exhibit a remarkably graded response to theophylline  (Fig 2e).  Inflection point is ...
+
+
 
 %¶ Our designs are not sensitive to the expression level of the sgRNA (Supp Fig [j23150]).
 
@@ -110,6 +112,10 @@ Electrotransformation: Electrocompetent cells were prepared as follows: make ``l
 Sorting: Cells were grown as for the CRISPRi assay, but when starting new  cultures, care was taken to subculture at least 10x more cells than the size of the library (often \uL{200}).  Sorting was done using a BD FACSAria II cell sorter.  Sorting was no slower than \evts{1000} and no faster than \evts{20,000}, with the slower speeds being more accurate and the faster speeds being necessary to sort large libraries.  Gates were drawn based on the position of the wildtype population if possible, and based on the most extreme library members otherwise.  All gates were drawn diagonally in GFP vs.\ RFP space.  Sorted cells were collected in \mL{1} SOC and, after sorting, were diluted into selective media and grown at 37°C with shaking at \rpm{225} overnight.
 
 Screening for \ligrnaB{}: Libraries are as in \refsupptab{libraries}
+
+\subsection{Spacer assay}
+
+The spacers for this assay were chosen by a script that generated uniformly random sequences, scored them by the method of \namedcite{doench16}, and kept only those that scored higher than 0.5 (the median).  This approach was designed to produce spacers that were as unbiased as possible, while still being likely to work well with the controls.  In fact, the average cleavage for the positive controls was 97\%, and the lowest cleavage for any of the positive controls was 78\%.
 
 \section{Figures}
 
@@ -195,9 +201,17 @@ Screening for \ligrnaB{}: Libraries are as in \refsupptab{libraries}
 
 \suppfig{in-vitro-in-vivo}
 
- \figonecol{supp_mat/20160304_combined_rational_designs_with_paper_labels}
+ \figonecol{supp_mat/in_vitro_in_vivo}
 
  \captitle{The strongest rational designs have weak ligand-sensitivity in the \invivo{} CRISPRi assay}  Data are from three experiments performed on the same day.
+
+\suppfig{spacer-gel}
+
+\suppfig{affinity-correlation}
+
+ \figonecol{supp_mat/affinity_correlation}
+
+ \captitle{Correlation between function and spacer base-pairing with the aptamer insert} Binding affinities (y-axis) were calculated using the \code{duplexfold} method from the ViennaRNA python3 API.  This method returns the minimum binding energy considering only inter-strand base pairs.  For each calculation, the first strand was one of the 24 \nt{20} spacer sequences used in the \invitro{} spacer assay (\reffig{2}d).  The second strand was \seq{GCCGAUACCAGCCGAAAGGCCCUUGGCAGCGAC} for \ligrnaF{} or \seq{GUGGGAUACCAGCCGAAAGGCCCUUGGCAGCCUAC} for \ligrnaB{}.  These sequences include both the aptamer and the randomized linker connecting the aptamer to the rest of the sgRNA scaffold.  Percent cleavage values (x-axis) are the means of three replicates from the \invitro{} spacer assay (\reffig{2}d).  Linear regressions and R-values are shown.
 
 \printbibliography[title=References]
 
