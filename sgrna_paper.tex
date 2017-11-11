@@ -67,11 +67,11 @@ Next, we tested the ligRNAs with decreasing concentrations of theophylline (\ref
 
 %¶ Our designs are not sensitive to the expression level of the sgRNA (Supp Fig [j23150]).
 
-We also tested how decreased expression levels would affect the ligRNAs by replacing the strong constitutive promoter used in every experiment up to this point (J23119) with a weak constitutive promoter (J23150) and repeating the CRISPRi assay (\refsuppfig{j23150}).  Both ligRNAs remained functional with both promoters.  In addition, the weaker promoter shifted the dynamic ranges of both ligRNAs in the direction of increased gene expression, to the point where nearly full gene activation was achieved.  This data provides more evidence that the ligRNAs are robust and not unduly sensitive to their environment, and the ability to tune the dynamic range via promoter strength may be important for applications that require either full gene activation or full gene repression.
+We also tested how decreased expression levels would affect the ligRNAs by replacing the strong constitutive promoter used in every experiment up to this point (J23119) with a weak constitutive promoter (J23150) and repeating the CRISPRi assay (\refsuppfig{j23150}).  Both ligRNAs remained functional with both promoters.  In addition, the weaker promoter shifted the dynamic ranges of both ligRNAs in the direction of increased gene expression, to the point where nearly full gene activation was achieved.  These data provide evidence that the ligRNAs are not unduly sensitive to their environment, and the ability to tune the dynamic range via promoter strength may be important for applications that require either full gene activation or full gene repression.
 
 %¶ We sought to understand the mechanism by which our ligRNAs functioned. (Supp Fig [vienna predictions], [mutagenesis], [shape-seq])
 
-
+We sought to understand the mechanism by which ligRNAs are activated and deactivated by doing mutagenesis experiments motivated by \insilico{} secondary structure predictions.  We used ViennaRNA \autocite{lorenz2011} to make predictions, and we modeled the ligand-bound state by adding a \kcalmol{-9.21} bonus for closing the ends of the aptamer.  For \ligrnaF{}, we predicted that the sgRNA scaffold was misfolded in the absence of ligand due to 6 nucleotides in the aptamer base-pairing with 6 nucleotides in the nexus (\refsuppfig{vienna-predictions}).  Unfortunately, testing this hypothesis via mutagenesis would've required mutating the theophylline binding motif of the aptamer, and we did not pursue this mechanism further.  For \ligrnaB{}, there was no difference in the predicted structures for the \apo{} and \holo{} states (\refsuppfig{vienna-predictions}).  However, we noticed that the stem installed by our screen retained a uracil that --- in the sgRNA scaffold --- flips out and buries itself in Cas9 \autocite{nishimasu2014}.  Because this uracil makes a wobble base pair in a stem leading up to the aptamer, we hypothesized that the stem unzips enough to allow the uracil to bury itself in Cas9 when no ligand absent, but that the stem zips closed and prevents Cas9 binding by sequestering the uracil when ligand is present (\refsuppfig{mutagenesis}a).  We began testing this hypothesis by moving the uracil to the opposite strand while keeping the wobble base-pair intact, and this rendered the ligRNA completely inactive \refsuppfig{mutagenesis}c).  We continued by modulating the strength of the base-pairs between the uracil and the aptamer, and consistent with the idea that the stem is being zipped and unzipped, we found that weaker base pairs were more repressing while stronger base pairs were more activating (\refsuppfig{mutagenesis}d).  We conclude that this mechanistic insight explains how an aptamer could control the assembly of a Cas9 complex and suggests more ways for ligRNAs to be tuned for specific applications.
 
 %¶ ligRNA⁻ can be used to control two genes with two different ligands (Fig 3, Supp Fig [ligand-matrix]).
 
@@ -122,6 +122,12 @@ Screening for \ligrnaB{}: Libraries are as in \refsupptab{libraries}
 \subsection{Spacer assay}
 
 The spacers for this assay were chosen by a script that generated uniformly random sequences, scored them by the method of \namedcite{doench16}, and kept only those that scored higher than 0.5 (the median).  This approach was designed to produce spacers that were as unbiased as possible, while still being likely to work well with the controls.  In fact, the average cleavage for the positive controls was 97\%, and the lowest cleavage for any of the positive controls was 78\%.
+
+\section{Contributions}
+
+KBK conceived the project, performed experiments, and wrote the paper.
+
+KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiments.
 
 \section{Figures}
 
