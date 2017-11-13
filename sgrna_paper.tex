@@ -39,6 +39,16 @@ CRISPRi: Clustered regularly interspaced short palindromic repeat inhibition
 
 %¶ Introduction (Fig 1a)
 
+% Tang:
+
+    %¶ CRISPRi is useful
+
+    %¶ Ligand-controlled Cas9 (promoters, split constructs, etc)
+
+    %¶ RNA devices
+
+    %¶ ligand-responsive RNAs
+
 \section{Results}
 
 % The results section needs to convince the reader that the central claim is supported by data and logic. Every scientific argument has its own particular logical structure, which dictates the sequence in which its elements should be presented.
@@ -77,15 +87,25 @@ We sought to understand the mechanism by which ligRNAs are activated and deactiv
 
 %¶ ligRNA⁻ can be used to control two genes with two different ligands (Fig 3, Supp Fig [ligand-matrix]).
 
-Finally, we tested whether ligRNAs could be used to simultaneously control two different genes with two different ligands.  The two ligands we used were theophylline (theo) and 3-methylxanthine (3mx).  The corresponding aptamers differ in only one position, so we simply replaced one aptamer with the other without further optimization.  \ligrnaF was negatively affected by this naive approach (\refsuppfig{ligand-matrix}) but \ligrnaB was not, so we used the latter to construct a system that expresses GFP upon addition of theophylline and expresses GFP and RFP upon addition of both ligands (\reffig{3}a,b).  We then performed a timecourse where we sequentially activated, deactivated, and reactivated both reporter genes using ligRNAs (\reffig{3}c).  The caveat with this particular ligand pair is that the aptamers are not orthogonal because the theophylline aptamer is triggered by both ligands.  Despite this, we've demonstrated that it's possible to use ligRNAs to sequentially activate two different genes.
+Finally, we tested whether ligRNAs could be used to simultaneously control two different genes with two different ligands.  The two ligands we used were theophylline (theo) and 3-methylxanthine (3mx).  The corresponding aptamers differ in only one position, so we simply replaced one aptamer with the other without further optimization.  \ligrnaF was negatively affected by this naive approach (\refsuppfig{ligand-matrix}) but \ligrnaB was not, so we used the latter to construct a system that expresses GFP upon addition of theophylline and expresses GFP and RFP upon addition of both ligands (\reffig{3}a,b).  We then performed a timecourse where we sequentially activated, deactivated, and reactivated both reporter genes using ligRNAs (\reffig{3}c).  The caveat with this particular ligand pair is that the aptamers are not orthogonal because the theophylline aptamer is triggered by both ligands.  Despite this, we've demonstrated that ligRNAs can be used to sequentially activate two different genes.
 
 \section{Discussion}
 
 % The discussion section explains how the results have filled the gap that was identified in the introduction, provides caveats to the interpretation, and describes how the paper advances the field by providing new opportunities.  This is typically done by recapitulating the results, discussing the limitations, and then revealing how the central contribution may catalyze future progress.
 
-%¶ Our ligRNAs are not functional in eukaryotic systems (Supp Fig [mammalian data], [yeast data]).  We believe this is because ....  This is an avenue for further development.
+%¶ Our ligRNAs are not functional in eukaryotic systems (Supp Fig [mammalian data], [yeast data]).  We believe this is because ....  Pitch project as proof-of-concept for future work.
+
+Despite functioning robustly in bacteria, we were unable to successfully transfer the ligRNAs to eukaryotic systems.  We first tried a gene-editing assay in a HEK293-based cell line, and observed no editing for any of the ligRNAs at any non-lethal concentration of theophylline (\refsuppfig{mammalian-data}).  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and either no repression or full repression for \ligrnaB{} depending on the spacer sequence (\refsuppfig{yeast-data}).  Given that the mechanisms of the ligRNAs as we understand them are not in any way specific to bacteria, we believe that getting ligRNAs to function in eukaryotic systems will require a careful optimization of conditions and perhaps the sequences linking the aptamer to the sgRNA scaffold, but no dramatic changes in philosophy.  In this respect, the current work is a proof-of-concept for the idea of using aptamers to directly manipulate the structure of sgRNA molecules.
 
 %¶ There have been two other ligand-controlled sgRNA systems described recently.  Compared to these, our system ... (is better).
+
+    % both directions
+
+    % no dependence on spacer
+
+    % tested against multiple spacers
+
+
 
 %¶ We believe that it will be increasingly important to study the spatial and temporal dependencies on genetic circuits, and believe that high-throughput way to regulate gene expression will be critical in the endeavor.
 
@@ -226,6 +246,10 @@ KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiment
     \captitle{The strongest rational designs have weak ligand-sensitivity in the \invivo{} CRISPRi assay}  Data are from three experiments performed on the same day.
 
 \suppfig{spacer-gel}
+
+    \fignatsize{supp_mat/spacer_gel}
+
+    \captitle{Representative gel from the \invitro{} spacer assay.}  This data is for the spacer in the top right corner of \reffig{3}d.  
 
 \suppfig{affinity-correlation}
 
