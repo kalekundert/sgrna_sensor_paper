@@ -16,6 +16,7 @@ FIGURES := \
 
 BIBLIOGRAPHIES := \
 	curated_refs.bib \
+	uncurated_refs.bib \
 
 $(BUILD)/$(SLUG).pdf: $(SLUG).tex $(PREAMBLE) $(FIGURES) $(BUILD)/$(SLUG).bbl Makefile
 	$(LATEX) $< 
