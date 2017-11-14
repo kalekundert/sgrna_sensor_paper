@@ -95,19 +95,15 @@ Finally, we tested whether ligRNAs could be used to simultaneously control two d
 
 %¶ Our ligRNAs are not functional in eukaryotic systems (Supp Fig [mammalian data], [yeast data]).  We believe this is because ....  Pitch project as proof-of-concept for future work.
 
-Despite functioning robustly in bacteria, we were unable to successfully transfer the ligRNAs to eukaryotic systems.  We first tried a gene-editing assay in a HEK293-based cell line, and observed no editing for any of the ligRNAs at any non-lethal concentration of theophylline (\refsuppfig{mammalian-data}).  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and either no repression or full repression for \ligrnaB{} depending on the spacer sequence (\refsuppfig{yeast-data}).  Given that the mechanisms of the ligRNAs as we understand them are not in any way specific to bacteria, we believe that getting ligRNAs to function in eukaryotic systems will require a careful optimization of conditions and perhaps the sequences linking the aptamer to the sgRNA scaffold, but no dramatic changes in philosophy.  In this respect, the current work is a proof-of-concept for the idea of using aptamers to directly manipulate the structure of sgRNA molecules.
+Despite functioning robustly in bacteria, we were unable to successfully transfer the ligRNAs to eukaryotic systems.  We first tried a gene-editing assay in a HEK293-based cell line, and observed no editing for any of the ligRNAs at any non-lethal concentration of theophylline (\refsuppfig{mammalian-data}).  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and either no repression or full repression for \ligrnaB{} depending on the spacer sequence (\refsuppfig{yeast-data}).  Given that the mechanisms of the ligRNAs as we understand them are not in any way specific to bacteria, we believe that getting ligRNAs to function in eukaryotic systems will require a careful optimization of conditions and perhaps the sequences linking the aptamer to the sgRNA scaffold, but not a dramatic change in philosophy.  In this respect, the current work is a proof-of-concept for the idea of using aptamers to directly manipulate the structure of sgRNA molecules.
 
 %¶ There have been two other ligand-controlled sgRNA systems described recently.  Compared to these, our system ... (is better).
 
-    % both directions
-
-    % no dependence on spacer
-
-    % tested against multiple spacers
-
-
+Two other ligand-controlled sgRNA systems have been described recently \autocite{liu2016,tang2017}.  \namedcite{liu2016} introduce a sequence with complementarity to the spacer on the 3' side of the sgRNA and use an aptamer-based strand displacement strategy to dislodge it in the presence of ligand.  \namedcite{tang2017} introduce a sequence with complementarity to the spacer on the 5' side of the sgRNA and use a ligand-controlled hammerhead ribozyme to cleave it off upon the addition of ligand.  ligRNAs have some significant advantages over both these approaches.  First, ligRNAs can be used to both activate and deactivate Cas9, whereas the previously reported systems can only activate it.  Second, ligRNAs can be easily incorporated into libraries because they don't require any complementarity with the spacer sequence.  Third, ligRNAs have the smoothest titration curves, allowing for the most graded control of gene expression.  And fourth, ligRNAs have the largest dynamic range by virtue of being screened for, rather than being rationally designed.  The disadvantages of the ligRNA system are that it has not been tested with as many aptamers as \namedcite{liu2016} and does not yet function in eukaryotic systems.
 
 %¶ We believe that it will be increasingly important to study the spatial and temporal dependencies on genetic circuits, and believe that high-throughput way to regulate gene expression will be critical in the endeavor.
+
+
 
 \section{Methods}
 
