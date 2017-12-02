@@ -1,0 +1,10 @@
+\begin{tabular}{ll}
+\toprule
+Name & Sequence \\
+\midrule
+{% for name, seq in components -%}
+    {{ name }} & \texttt{{ '{' }}{{ seq.dna }}{{ '}' }} \\
+{% endfor -%}
+\bottomrule
+\end{tabular}
+

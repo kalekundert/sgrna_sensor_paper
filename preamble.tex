@@ -1,10 +1,12 @@
 \usepackage{adjustbox}
+\usepackage{amsmath}
 \usepackage{array}
 \usepackage{authblk}
 \usepackage{bbding}
-\usepackage[autocite=superscript]{biblatex}
+\usepackage[autocite=superscript,sorting=none]{biblatex}
 \usepackage{caption}
 \usepackage{booktabs}
+\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{multirow}
@@ -24,6 +26,10 @@ UprightFont    = *-Regular,
 BoldFont       = *-Bold,
 ItalicFont     = *-Italic,
 BoldItalicFont = *-BoldItalic]
+
+% Use the same font in equations as in the main text
+\usepackage{mathastext}
+\usepackage{isomath}
 
 % Double space the draft.
 \usepackage{setspace}
@@ -67,30 +73,30 @@ BoldItalicFont = *-BoldItalic]
 \newcommand\yeast{\latin{S.~cerevisiae}}
 
 \newcommand\bp[1]{\unit[#1]{bp}}
-\newcommand\evts[1]{\unit[#1]{evt/s}}
+\newcommand\evts[1]{\unitfrac[#1]{evt}{s}}
 \newcommand\g[1]{\unit[#1]{g}}
 \newcommand\hour[1]{\unit[#1]{h}}
-\newcommand\kcalmol[1]{\unit[#1]{kcal/mol}}
+\newcommand\kcalmol[1]{\unitfrac[#1]{kcal}{mol}}
 \newcommand\kV[1]{\unit[#1]{kV}}
 \newcommand\liter[1]{\unit[#1]{liter}}
-\newcommand\mgmL[1]{\unit[#1]{mg/mL}}
+\newcommand\mgmL[1]{\unitfrac[#1]{mg}{mL}}
 \newcommand\minute[1]{\unit[#1]{min}}
 \newcommand\mL[1]{\unit[#1]{mL}}
 \newcommand\mM[1]{\unit[#1]{mM}}
 \newcommand\molar[1]{\unit[#1]{M}}
 \newcommand\ms[1]{\unit[#1]{ms}}
-\newcommand\nguL[1]{\unit[#1]{ng/μL}}
+\newcommand\nguL[1]{\unitfrac[#1]{ng}{μL}}
 \newcommand\ngx[1]{\unit[#1]{ng}}
 \newcommand\nt[1]{\unit[#1]{nt}}
 \newcommand\nM[1]{\unit[#1]{nM}}
-\newcommand\pguL[1]{\unit[#1]{pg/μL}}
+\newcommand\pguL[1]{\unitfrac[#1]{pg}{μL}}
 \newcommand\px[1]{\unit[#1]{px}}
 \newcommand\rpm[1]{\unit[#1]{rpm}}
-\newcommand\ugmL[1]{\unit[#1]{μg/mL}}
+\newcommand\ugmL[1]{\unitfrac[#1]{μg}{mL}}
 \newcommand\uL[1]{\unit[#1]{μL}}
 \newcommand\uM[1]{\unit[#1]{μM}}
-\newcommand\UuL[1]{\unit[#1]{U/μL}}
-\newcommand\Vcm[1]{\unit[#1]{V/cm}}
+\newcommand\UuL[1]{\unitfrac[#1]{U}{μL}}
+\newcommand\Vcm[1]{\unitfrac[#1]{V}{cm}}
 
 \newcommand\namedcite[1]{\citeauthor*{#1}\autocite{#1}}
 
@@ -137,9 +143,9 @@ BoldItalicFont = *-BoldItalic]
 
 % Commands to format figures in tables in the proper amounts of space.
 \newcommand\figonecol[1]{%
- \begin{center}
+ \begin{center}%
   \includegraphics[width=3.46in]{#1}%
- \end{center}
+ \end{center}%
 }
 \newcommand\figtwocol[1]{%
  \makebox[\textwidth][c]{\includegraphics[width=7in]{#1}}%
@@ -159,6 +165,13 @@ BoldItalicFont = *-BoldItalic]
  \begin{adjustbox}{width=7in,center=\textwidth}%
    \input{#1}%
  \end{adjustbox}%
+ }
+}
+\newcommand\tabnatsize[1]{%
+ {\singlespacing%
+   \begin{center}%
+    \input{#1}%
+   \end{center}%
  }
 }
 

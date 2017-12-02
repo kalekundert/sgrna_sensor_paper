@@ -1,13 +1,15 @@
-\begin{tabular}{rll}
+\begin{tabular}{rlll}
 \toprule
 \# &
 Domain &
+Size &
 Sequence \\
 \midrule
-{% for i, row in df.iterrows() %}
+{% for i, row in df.iterrows() -%}
  {{ row.id }} &
  {{ row.domain }} &
+ 4\textsuperscript{{ '{%.0f}' % row.log4_complexity }} &
  \verb|{{ row.sequence }}| \\
-{% endfor %}
+{% endfor -%}
 \bottomrule
 \end{tabular}

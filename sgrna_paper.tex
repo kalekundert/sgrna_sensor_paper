@@ -62,7 +62,7 @@
 
 %¶ All three solvent-exposed stems can be used to control the sgRNA (Fig 1b,1d,1e, Supp Tab [rational designs]).  Not enough to simply replace the stem.
 
-We began by quickly screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn insertion sites were most sensitive to the presence of the theophylline aptamer \autocite{jenison1994}, and which strategies for linking the aptamer to the sgRNA were most effective.  Regarding insertion sites, we tried inserting the aptamer into each of the stems in \reffig{1}b, which are all solvent-exposed in the crystal structure of Cas9 in complex with sgRNA and DNA \autocite{nishimasu2014}.  Regarding linking strategies, we tried naively replacing different parts of each stem with the aptamer, splitting the sgRNA in half and using the aptamer to bring the halves together, and designing specific strand displacements for the \apo{} and \holo{} states.  We found functional sensors for all three insertion sites, and were most successful with the strand displacement strategy (\reffig{1}d, \refsupptab{rational-designs}).  All of these sensors could be titrated (\reffig{1}e).  We also unexpectedly learned that inserting the aptamer into the nexus region yields sensors that respond to the absence of theophylline, rather than to the presence of it.  Knowing how to design both ligand-activated and ligand-deactivated sgRNAs \invitro{}, we next sought to find sensors that would function robustly \invivo{}.
+We began by quickly screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn which insertion sites were most sensitive to the presence of the theophylline aptamer \autocite{jenison1994}, and which strategies for linking the aptamer to the sgRNA were most effective.  Regarding insertion sites, we tried inserting the aptamer into each of the stems in \reffig{1}b, which are all solvent-exposed in the crystal structure of Cas9 in complex with sgRNA and DNA \autocite{nishimasu2014}.  Regarding linking strategies, we tried naively replacing different parts of each stem with the aptamer, splitting the sgRNA in half and using the aptamer to bring the halves together, and designing specific strand displacements for the \apo{} and \holo{} states.  We found functional sensors for all three insertion sites, and were most successful with the strand displacement strategy (\reffig{1}d, \refsupptab{rational-designs}).  All of these sensors could be titrated (\reffig{1}e).  We also unexpectedly learned that inserting the aptamer into the nexus region yields sensors that respond to the absence of theophylline, rather than to the presence of it.  Knowing how to design both ligand-activated and ligand-deactivated sgRNAs \invitro{}, we next sought to find sensors that would function robustly \invivo{}.
 
 %¶ We did a FACS screen to find linker sequences that would work well (Fig 2a,2b,2c, Supp Fig [in vitro in vivo]).
 
@@ -144,7 +144,28 @@ Screening for \ligrnaB{}: Libraries are as in \refsupptab{libraries}
 
 \subsection{Spacer assay}
 
-The spacers for this assay were chosen by a script that generated uniformly random sequences, scored them by the method of \namedcite{doench16}, and kept only those that scored higher than 0.5 (the median).  This approach was designed to produce spacers that were as unbiased as possible, while still being likely to work well with the controls.  In fact, the average cleavage for the positive controls was 97\%, and the lowest cleavage for any of the positive controls was 78\%.
+Choice of spacers: The spacers for this assay were chosen by a script that generated uniformly random sequences, scored them by the method of \namedcite{doench2016}, and kept only those that scored higher than 0.5 (the median).  This approach was designed to produce spacers that were as unbiased as possible, while still being likely to work well with the controls.  In fact, the average cleavage for the positive controls was 97\%, and the lowest cleavage for any of the positive controls was 78\% (\refsupptab{spacer-assay}).
+
+\subsection{RNA secondary structure predictions}
+
+Secondary structure predictions were made using the RNAfold program from the ViennaRNA package (version 2.4.3).  The structures reported here are minimum free energy (MFE) predictions, although centroid and maximum expected accuracy (MEA) structures from partition function calculations were nearly identical in every case.  The \holo{} state was simulated using soft constraints: a \kcalmol{-9.21} bonus was granted for forming the base pair flanking the aptamer.  This bonus corresponds to the \nM{320} affinity of the theophylline aptamer for its ligand \autocite{jenison1994}:
+
+\begin{align*}
+\Delta G
+    &= RT \ln K_D \\
+    &= (\unitfrac[\mathrm{1.987 \times 10^{-3}}]{kcal}{mol \cdot K}) 
+       (\unit[\mathrm{310}]{K}) 
+       \ln (\unit[\mathrm{3.20 \times 10^{-4}}]{M}) \\
+    &= \unitfrac[\mathrm{-9.213}]{kcal}{mol} \\
+\end{align*}
+
+The command-lines used for the \apo{} and \holo{} states, respectively, are given below:
+
+\begin{verbatim}
+$ RNAfold --partfunc --MEA
+$ RNAfold --partfunc --MEA --motif \
+    "GAUACCAGCCGAAAGGCCCUUGGCAGC,(...((((((....)))...)))...),-9.212741321099747"
+\end{verbatim}
 
 \section{Contributions}
 
@@ -177,13 +198,13 @@ KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiment
 % delete panel c
 %
 % ^.
- (d) Efficiency of \invitro{} Cas9 cleavage of DNA in the presence and absence of 10mM theophylline for selected ligRNAs  (full data avaliable as Supplemental XXX).  Design numbers refer to \refsupptab{rational-designs} and are color-coded by aptamer insertion site in panel (b).  Percent cut values (bottom) are the average of at least two experiments.  All data shown are from a single gel.
+ (d) Efficiency of \invitro{} Cas9 cleavage of DNA in the presence and absence of 10mM theophylline for selected ligRNAs.  Design numbers refer to \refsupptab{rational-designs} and are color-coded by aptamer insertion sites.  Percent cut values (bottom) are the average of at least two experiments.  All data shown are from a single gel.
 % * <kortemme@cgl.ucsf.edu> 2017-11-02T12:56:29.000Z:
 %
 % should replace "sgRNA construct" with whatever nomenclature we decide on, i.e. ligRNA- etc
 %
 % ^.
- (e) Graded cleavage efficiency in response to increasing concentrations of theophylline for a selected sgRNA construct.
+ (e) Graded cleavage efficiency in response to increasing concentrations of theophylline for a selected design.
 
 \fig{2}
 
@@ -215,6 +236,18 @@ KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiment
 
 \section{Supplementary Materials}
 
+\supptab{components}
+
+    \tabtwocol{supp_mat/components}
+
+    \captitle{Miscellaneous DNA sequences used in this project.}
+
+\supptab{libraries}
+
+    \tabtwocol{supp_mat/library_sequences}
+
+    \captitle{Library sequences screened via FACS in this project.}  \ligrnaF{} came from library \#29, while \ligrnaB{} came from library \#22.  Libraries \#29 and \#30 are based on the best clone isolated from library \#26.
+
 \supptab{rational-designs}
 
     \tabtwocol{supp_mat/rational_design_sequences}
@@ -222,49 +255,51 @@ KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiment
     \captitle{Complete results from the \invitro{} screen of rational designs.}  
     \#: The number used to refer to a rational design in the main text.
     Strategy: The mechanism by which the design was intended to work.  "Stem Replacement" means a stem in the sgRNA was simply replaced with by the aptamer (possibly with a linker).  "Induced dimerization" means the sgRNA was slit in half, with each half getting part of the aptamer, in the hope that the two halves would dimerize in the presence of ligand.  "Strand displacement" means that we designed strands that could base pair in two ways --- one with wildtype sgRNA 2° structure and the other somehow different --- in the hope that the aptamer would trigger a switch between the two conformations.
-    Domain: Where in the sgRNA the aptamer was inserted.  
-    Cleavage: The percent of DNA that was cleaved by a design in the \invitro{} assay.  The \apo{} and \holo{} columns refer to the cleavage with and without theophylline, respectively, the Δ column is the difference between those, and the σ column is the standard deviation of the Δ values for the designs with more than one replicate.  All the percentages are rounded to the nearest 1.
-    N: The number of replicates for each design.  The reported percentages are the average of each replicate.
-    Active: We considered a design to be acitve if it exhibited a >15\% change in cleavage in response to ligand.  15\% is about the point at which the difference is clearly visible on a gel.
-    Sequence: The sequence of the design, including the spacer.
-
-\supptab{libraries}
-
-    \tabtwocol{supp_mat/library_sequences/library_tabular}
-
-    \captitle{Library sequences screened via FACS}
+    Domain: Where in the sgRNA the aptamer was inserted.
+    Cleavage: The percent of DNA that was cleaved by a design in the \invitro{} assay.  The \apo{} and \holo{} columns refer to the cleavage with and without theophylline, respectively, the Δ column is the difference between those, and the σ column is the standard deviation of the Δ values for the designs with more than one replicate.  All the percentages are the average of any replicates and are rounded to the nearest 1.
+    N: The number of replicates for each design.
+    Active: We considered a design to be active if it exhibited a >15\% change in cleavage in response to ligand.  15\% is about the point at which the difference is clearly visible on a gel.
+    Sequence: The sequence of the design, including the spacer AAVS spacer used in this assay.
 
 \supptab{spacer-assay}
 
-    Coming soon.  A table containing all the results from the spacer assay.  
+    \tabtwocol{supp_mat/spacer_assay}
+
+    \captitle{Complete results from the \invitro{} spacer-dependence assay.}
+    \#: The row and column in the heatmap in \reffig{2}d corresponding to this spacer.
+    Sequence: The \bp{30} target sequence that was present in the DNA.  In upper case is the \bp{20} spacer sequence that was present in the sgRNA.  Note that each spacer begins with 3 \seq{G}'s, which is necessary for good transcription by T7 polymerase.  The \seq{NGG} PAM is just to the right of the sgRNA spacer sequence.  The way in which these sequences were chosen is described in the Methods section.
+    Score: The score of the target sequence by the method of \namedcite{doench2016}.  Sequences with scores lower than 0.5 (about half of those generated) were not used.
+    pos, neg, \ligrnaF{}, \ligrnaB{}: Cleavage data for the indicated sgRNA.  See \refsupptab{rational-designs} for the meaning of the \apo{}, \holo{}, Δ, σ, N columns.
 
 \suppfig{in-vitro-in-vivo}
 
     \fignatsize{supp_mat/in_vitro_in_vivo}
 
-    \captitle{The strongest rational designs have weak ligand-sensitivity in the \invivo{} CRISPRi assay}  Data are from three experiments performed on the same day.
+    \captitle{The strongest rational designs have weak ligand-sensitivity \invivo{}}  Flow cytometry traces and fold change plots for the rational designs that were tested \invivo{}.  The labels on the y-axis refer to \refsupptab{rational-designs}.  Traces are color-coded by where the aptamer was inserted.  The x-axis is RFP fluorescence normalized by GFP fluorescence and the negative control.  All other lines and symbols as described in \reffig{2}.  Data are from three experiments performed on the same day (in all other experiments reported in this paper, replicates were performed on different days).
 
 \suppfig{spacer-gel}
 
     \fignatsize{supp_mat/spacer_gel}
 
-    \captitle{Representative gel from the \invitro{} spacer assay.}  This data is for the spacer in the top right corner of \reffig{3}d.  
+    \captitle{Representative gel from the \invitro{} spacer assay.}  This data is a single replicate for spacer \#1,1 (i.e. the top left corner of the \reffig{2}d).  The upper and lower bands are uncleaved and cleaved DNA, respectively.  Each design was tested in the absence and presence of theophylline.  The amount of DNA cleavage was quantified by gel densiometry and is reported as a percentage below each lane.
 
 \suppfig{affinity-correlation}
 
     \fignatsize{supp_mat/affinity_correlation}
 
-    \captitle{Correlation between function and spacer base-pairing with the aptamer insert} Binding affinities (y-axis) were calculated using the \code{duplexfold} method from the ViennaRNA python3 API.  This method returns the minimum binding energy considering only inter-strand base pairs.  For each calculation, the first strand was one of the 24 \nt{20} spacer sequences used in the \invitro{} spacer assay (\reffig{2}d).  The second strand was \seq{GCCGAUACCAGCCGAAAGGCCCUUGGCAGCGAC} for \ligrnaF{} or \seq{GUGGGAUACCAGCCGAAAGGCCCUUGGCAGCCUAC} for \ligrnaB{}.  These sequences include both the aptamer and the randomized linker connecting the aptamer to the rest of the sgRNA scaffold.  Percent cleavage values (x-axis) are the means of three replicates from the \invitro{} spacer assay (\reffig{2}d).  Linear regressions and R-values are shown.
+    \captitle{Correlation between ligRNA function and the amount of base-pairing between the spacer and the aptamer insert} Binding affinities (y-axis) were calculated using the \code{duplexfold} method from the python3 API of the VienaRNA package (version 2.4.3).  This method returns the minimum binding energy between two strand of RNA considering only inter-strand base pairs.  For each calculation, the first strand was one of the 24 \nt{20} spacer sequences used in the \invitro{} spacer assay (\refsupptab{spacer-assay}).  The second strand was \seq{GCCGAUACCAGCCGAAAGGCCCUUGGCAGCGAC} for \ligrnaF{} or \seq{GUGGGAUACCAGCCGAAAGGCCCUUGGCAGCCUAC} for \ligrnaB{}.  These sequences include both the aptamer and the randomized linker connecting the aptamer to the rest of the sgRNA scaffold.  Percent cleavage values (x-axis) are the means of three replicates from the \invitro{} spacer assay (\reffig{2}d).  Linear regressions (solid lines) and R-values are shown.
 
 \suppfig{j23150}
 
     \fignatsize{supp_mat/j23150}
 
-    \captitle{Sensor activity is predictably modulated by promoter strength.}  Single-cell fluorescence measurments for three ligRNAs (the two discussed in the main text and a third "alternate" isolated from the same screen as \ligrnaF{}) in the context of strong (J23119) and weak (J23150) constitutive promoters.  The alternate ligRNA actually has a larger dynamic range with the weaker promoter, and may be a useful for applications where lower concentrations of ligRNA are anticipated.
+    \captitle{Sensor activity is predictably modulated by promoter strength.}  Flow cytometrytraces and fold change plots for three ligRNAs (the two discussed in the main text and a third "alternate" isolated from the same screen as \ligrnaF{}) in the context of strong (J23119) and weak (J23150) constitutive promoters.  All lines and symbols are described in \reffig{2}.  The alternate ligRNA actually has a larger dynamic range with the weaker promoter, and may be a useful for applications where lower concentrations of ligRNA are anticipated.
 
 \suppfig{vienna-predictions}
 
-    Coming soon...
+    \figtwocol{supp_mat/vienna_predictions}
+
+    \captitle{Secondary structure predictions suggest mechanisms of ligand sensitivity} The sequences of \ligrnaF{} (a) and \ligrnaB{} (b) are color-coded by domain.  Immediately below the sequences are the predicted structures for the \apo{} state, and below those are the predicted structures for the \holo{} state.  Base pairs and unpaired positions are represented by parentheses and full stops, respectively.  Secondary structure and free energy predictions for both states were calculated as described in the Methods section.  (a) In the \apo{} state, the nexus is predicted to base-pair with the aptamer, but in the \holo{} state, the sgRNA is predicted to fold correctly.  (b) The \apo{} and \holo{} states are predicted to have the same fold (consistent with the mechanism proposed in \refsuppfig{mutagenesis}), but note that neither prediction recapitulates the known sgRNA stems very well.
 
 \suppfig{mutagenesis}
 
@@ -274,9 +309,11 @@ KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiment
 
     \fignatsize{supp_mat/mutagenesis_de}
 
+    \captitle{\ligrnaB{} works by preventing a uracil from burying in Cas9}
+
     (a) Schematic illustrating the idea that \ligrnaB{} works by sequestering the indicated uracil.  The uracil is always unpaired in wildtype sgRNA (left).  The hypothesis is that the same uracil in \ligrnaB{} is at least occasionally unpaired in the \apo{} state (center), but is always paired in the \holo{} state (right).
-    (b) A crystal structure of Cas9 in complex with an sgRNA (4UN3) shows the indicated uracil flipped out and buried in the protein.
-    (c-e) Flow cytometry traces and fold change plots for various mutants of \ligrnaB{}.  The labels give the sequence of the particular mutant being tested.  Any mutations relative to \ligrnaB{} are highlighted in yellow.  The uracil in question is indicated with a small triangle.  All other lines and symbols are as in \reffig{2}.
+    (b) A crystal structure of Cas9 in complex with an sgRNA (4UN3) shows the indicated uracil flipped out and buried in the protein \autocite{nishimasu2014}.
+    (c-e) Flow cytometry traces and fold change plots for various mutants of \ligrnaB{}.  The labels give the sequence of the particular mutant being tested.  Any mutations relative to \ligrnaB{} are highlighted in yellow.  The uracil in question is indicated with a small triangle.  All other lines and symbols are described in \reffig{2}.
     (c) Positive and negative controls, and \ligrnaB{} itself.
     (d) Strand-swap mutations for each position along the nexus stem.  None of the mutants are as functional as \ligrnaB{}, but the sensor is tolerant of mutation at positions 2, 4, and 5.  Position 3 was expected to be intolerant due to the importance of the uracil.  We cannot rationalize the intolerance of position 1.  In the context of wildtype sgRNA, any base pair is tolerated at this position, but in the context of \ligrnaB{}, no base pair but \seq{CG} is tolerated (data not shown).
     (e) Modulating the strength of the stem above the uracil has a predictable effect on function.  From top to bottom, the mutants are arranged in the order of increasing base-pairing strength.  Populations shifted to the left indicate stronger activation because the fluorescent reporter was more effective repressed.  Our hypothesis (that \ligrnaB{} works by sequestering the uracil upon ligand binding) predicts that strengthening or weakening the stem above the uracil should decrease or increase activation, respectively.  The clear downward diagonal trend in the populations supports this hypothesis and demonstrates that we can tune the dynamic range of \ligrnaB{} to some extent.  The third and fourth mutants (\seq{AU} and \seq{UA}) may even be useful for applications where strong repression is desired, despite the fact that their dynamic range (10x) is somewhat narrower than that of \ligrnaB{} (15x).

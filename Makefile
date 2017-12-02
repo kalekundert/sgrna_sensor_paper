@@ -11,8 +11,8 @@ FIGURES := \
 	figure_2/figure_2.pdf \
 	figure_3/figure_3.pdf \
 	table_1/summary_tabular.tex \
-	supp_mat/rational_design_sequences.tex \
-	supp_mat/library_sequences/library_tabular.tex \
+	$(wildcard supp_mat/*.pdf) \
+	$(wildcard supp_mat/*.tex) \
 
 BIBLIOGRAPHIES := \
 	curated_refs.bib \
@@ -27,7 +27,11 @@ $(BUILD)/$(SLUG).bbl : $(BIBLIOGRAPHIES) Makefile
 	$(LATEX) $(SLUG)
 
 again : 
-	$(LATEX) $(SLUG).tex 
+	$(LATEX) $(SLUG)
+
+twice : 
+	$(LATEX) $(SLUG)
+	$(LATEX) $(SLUG)
 
 bib :
 	$(LATEX) $(SLUG)
