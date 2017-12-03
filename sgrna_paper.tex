@@ -27,15 +27,6 @@
 
 \section{Abstract}
 
-\section{Acronyms}
-
-\begin{itemize}
-    \item FACS: Fluorescence activated cell sorting
-    \item GFP: Green fluorescent protein
-    \item RFP: Red fluorescent protein
-    \item CRISPRi: Clustered regularly interspaced short palindromic repeat inhibition
-\end{itemize}
-
 \section{Introduction}
 
 %¶ Hmmmm...
@@ -66,7 +57,7 @@ We began by quickly screening 97 rational designs using an \invitro{} Cas9 cleav
 
 %¶ We did a FACS screen to find linker sequences that would work well (Fig 2a,2b,2c, Supp Fig [in vitro in vivo]).
 
-We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only very weak activity in the CRISPRi assay (\refsuppfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsupptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of theophylline.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Before we began doing that, most of the sensors we isolated were specific for the spacer used in the screen.  The most robust ligand-activated sensor (\ligrnaF{}; i.e. sgRNA that's active in the + ligand state) and ligand-deactivated sensor (\ligrnaB{}; i.e. sgRNA that's active in the − ligand state) that we isolated are shown in \reffig{2}b,c.  With a spacer that was not used in any of the screens, both sensors have a >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
+We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only very weak activity in the CRISPRi assay (\refsuppfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsupptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of theophylline.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Without it, most of the sensors we isolated were specific for the spacer used in the first screens.  The most robust ligand-activated sensor (\ligrnaF{}; i.e. sgRNA that's active in the + ligand state) and ligand-deactivated sensor (\ligrnaB{}; i.e. sgRNA that's active in the − ligand state) that we isolated are shown in \reffig{2}b,c.  With a spacer that was not used in any of the screens, both sensors have a >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
 
 %¶ Our designs are spacer-independent (Fig 2d, Supp Fig [spacer-gel], [affinity-correlation]).
 
@@ -86,11 +77,15 @@ We also tested how decreased expression levels would affect the ligRNAs by repla
 
 % I decided to keep the narrative simpler by leaving the mutants we don't understand out of the main text.  I'll talk about them in the caption of the supplementary figure, instead.
 
-We sought to understand the mechanism by which ligRNAs are activated and deactivated by doing mutagenesis experiments motivated by \insilico{} secondary structure predictions.  We used ViennaRNA \autocite{lorenz2011} to make predictions, and we modeled the ligand-bound state by adding a \kcalmol{-9.21} bonus for closing the ends of the aptamer.  For \ligrnaF{}, we predicted that the sgRNA scaffold was misfolded in the absence of ligand due to 6 nucleotides in the aptamer base-pairing with 6 nucleotides in the nexus (\refsuppfig{vienna-predictions}).  Unfortunately, testing this hypothesis via mutagenesis would've required mutating the theophylline binding motif of the aptamer, and we did not pursue this mechanism further.  For \ligrnaB{}, there was no difference in the predicted structures for the \apo{} and \holo{} states (\refsuppfig{vienna-predictions}).  However, we noticed that the stem installed by our screen retained a uracil that --- in the sgRNA scaffold --- flips out and buries itself in Cas9 \autocite{nishimasu2014}.  Because this uracil makes a wobble base pair in a stem leading up to the aptamer, we hypothesized that the stem unzips enough to allow the uracil to bury itself in Cas9 when no ligand absent, but that the stem zips closed and prevents Cas9 binding by sequestering the uracil when ligand is present (\refsuppfig{mutagenesis}a).  We began testing this hypothesis by moving the uracil to the opposite strand while keeping the wobble base-pair intact, and this rendered the ligRNA completely inactive \refsuppfig{mutagenesis}d).  We continued by modulating the strength of the base-pairs between the uracil and the aptamer, and consistent with the idea that the stem is being zipped and unzipped, we found that weaker base pairs were more repressing while stronger base pairs were more activating (\refsuppfig{mutagenesis}e).  We conclude that this mechanistic insight explains how an aptamer could control the assembly of a Cas9 complex and suggests more ways for ligRNAs to be tuned for specific applications.
+% On a second reading, I'm not sure if this is a good idea.  The case for our mechanism doesn't really sounds that strong, especially for how long I talk about it...
+
+We sought to understand the mechanism by which ligRNAs are activated and deactivated by doing mutagenesis experiments motivated by \insilico{} secondary structure predictions.  We used ViennaRNA \autocite{lorenz2011} to make predictions, and we modeled the ligand-bound state by adding a \kcalmol{-9.21} bonus for closing the ends of the aptamer.  For \ligrnaF{}, we predicted that the sgRNA scaffold was misfolded in the absence of ligand due to 6 nucleotides in the aptamer base-pairing with 6 nucleotides in the nexus (\refsuppfig{vienna-predictions}).  Unfortunately, testing this hypothesis via mutagenesis would've required mutating the theophylline binding motif of the aptamer, and we did not pursue this mechanism further.  For \ligrnaB{}, there was no difference in the predicted structures for the \apo{} and \holo{} states (\refsuppfig{vienna-predictions}).  However, we noticed that the stem installed by our screen retained a uracil that --- in the sgRNA scaffold --- flips out and buries itself in Cas9 \autocite{nishimasu2014}.  Because this uracil makes a wobble base pair in a stem leading up to the aptamer, we hypothesized that the stem unzips enough to allow the uracil out when ligand is absent, but zips closed and prevents Cas9 binding by sequestering the uracil when ligand is present (\refsuppfig{mutagenesis}a).  We began testing this hypothesis by moving the uracil to the opposite strand while keeping the wobble base-pair intact, and this rendered \ligrnaB{} completely inactive \refsuppfig{mutagenesis}d).  We continued by modulating the strength of the base-pairs between the uracil and the aptamer, and consistent with the idea that the stem is being zipped and unzipped, we found that weaker base pairs were more repressing while stronger base pairs were more activating (\refsuppfig{mutagenesis}e).  We conclude that this mechanistic insight explains how an aptamer could control the assembly of a Cas9 complex and suggests more ways for ligRNAs to be tuned for specific applications.
 
 %¶ ligRNA⁻ can be used to control two genes with two different ligands (Fig 3, Supp Fig [ligand-matrix]).
 
-Finally, we tested whether ligRNAs could be used to simultaneously control two different genes with two different ligands.  The two ligands we used were theophylline (theo) and 3-methylxanthine (3mx).  The corresponding aptamers differ in only one position, so we simply replaced one aptamer with the other without further optimization.  \ligrnaF was negatively affected by this naive approach (\refsuppfig{ligand-matrix}) but \ligrnaB was not, so we used the latter to construct a system that expresses GFP upon addition of theophylline and expresses GFP and RFP upon addition of both ligands (\reffig{3}a,b).  We then performed a timecourse where we sequentially activated, deactivated, and reactivated both reporter genes using ligRNAs (\reffig{3}c).  The caveat with this particular ligand pair is that the aptamers are not orthogonal because the theophylline aptamer is triggered by both ligands.  Despite this, we've demonstrated that ligRNAs can be used to sequentially activate two different genes.
+Finally, we tested whether ligRNAs could be used to simultaneously control two different genes with two different ligands.  The two ligands we used were theophylline (theo) and 3-methylxanthine (3mx).  The corresponding aptamers differ in only one position, so we simply replaced one aptamer with the other without further optimization.  \ligrnaF was negatively affected by this naive approach (\refsuppfig{ligand-matrix}) but \ligrnaB was not, so we used only the latter to construct a system that expresses GFP upon addition of theophylline and expresses GFP and RFP upon addition of both ligands (\reffig{3}a,b).  We then performed a timecourse where we sequentially activated, deactivated, and reactivated both reporter genes using ligRNAs (\reffig{3}c).  The caveat with this particular ligand pair is that the aptamers are not orthogonal because the theophylline aptamer is triggered by both ligands.  Despite this, we've demonstrated that ligRNAs can be used to sequentially activate two different genes.
+
+% This paragraphs ends with "despite", and the next paragraph start with it.  I should find a different word to use.
 
 \section{Discussion}
 
@@ -112,7 +107,7 @@ We believe that the study of subtle and complex biological systems will increasi
 
 \subsection{\Invitro{} Cas9 cleavage assay}
 
-\Invitro{} transcription: Linear, double-stranded template DNA was acquired either by ordering gBlocks® Gene Fragments from IDT (\reffig{1}) or by cloning the desired sequence into a pUC vector and digesting it with with EcoRI and HindIII (\reffig{2}).  Each construct had the following T7 promoter --- \seq{TATAGTAATAATACGACTCACTATAG} --- and a spacer sequence that began with at least 3 G's.  The HiScribe™ T7 High Yield RNA Synthesis Kit (NEB E2040S) was used to transcribe \ngx{10-50} of DNA template, and the RNA Clean \& Concentrator™-25 spin columns (Zymo R1018) were used to remove unincorporated nucleotides.  Target DNA: Target DNA was prepared by using inverse PCR to clone the appropriate target sequence into the pCR2.1 vector roughly across from its XmnI site (i.e.\ in the MCS).  The vector was then digested with XmnI (NEB R0194S) as follows: mix \uL{43.5} \nguL{≈500} miniprepped pCR2.1 DNA, \uL{5.0} 10x CutSmart buffer, and \uL{1.5} \UuL{20} XmnI; incubate at 37°C until no uncleaved plasmid is detectable on a gel (usually \minute{30--60}); dilute to \nM{30}; store at -20°C.  Cas9 reaction: We adapted the following protocol from \namedcite{briner2014}: mix \uL{5.0} water or \mM{30} theophylline and \uL{1.5} \uM{1.5} sgRNA; incubate at 95°C for \minute{3}, then at 4°C for \minute{1}; add \uL{5.48} water, \uL{1.5} 10x Cas9 buffer, and \uL{0.02} \uM{20} Cas9 (NEB M0386T) via master mix; incubate at room temperature for \minute{10}; add \uL{1.5} \nM{30} target DNA; pipet to mix; incubate at 37°C for \hour{1}; add \uL{0.09} \mgmL{20} RNase~A (Sigma R6148), \uL{0.09} \mgmL{20} Proteinase~K (Denville CB3210-5), and \uL{2.82} 6x loading dye via master mix; incubate at 37°C for \minute{20}, then at 55°C for \minute{20}; run the entire reaction (\uL{18}) on a 1\% agarose/TAE/GelRed gel at \Vcm{4.5} for \minute{70}.  Gel quantification: Band intensities were quantified using Fiji (1.51r).  The background was subtracted from each image using a \px{50} rolling ball radius.  The fraction of DNA cleaved in each lane was calculated:
+\Invitro{} transcription: Linear, double-stranded template DNA was acquired either by ordering gBlocks® Gene Fragments from IDT (\reffig{1}d,e) or by cloning the desired sequence into a pUC vector and digesting it with with EcoRI and HindIII (\reffig{2}d).  Each construct had the following T7 promoter --- \seq{TATAGTAATAATACGACTCACTATAG} --- and a spacer sequence that began with at least 3 G's.  The HiScribe™ T7 High Yield RNA Synthesis Kit (NEB E2040S) was used to transcribe \ngx{10-50} of DNA template, and the RNA Clean \& Concentrator™-25 spin columns (Zymo R1018) were used to remove unincorporated nucleotides.  Target DNA: Target DNA was prepared by using inverse PCR to clone the appropriate target sequence into the pCR2.1 vector roughly across from its XmnI site (i.e.\ in the MCS).  The vector was then digested with XmnI (NEB R0194S) as follows: mix \uL{43.5} \nguL{≈500} miniprepped pCR2.1 DNA, \uL{5.0} 10x CutSmart buffer, and \uL{1.5} \UuL{20} XmnI; incubate at 37°C until no uncleaved plasmid is detectable on a gel (usually \minute{30--60}); dilute to \nM{30}; store at -20°C.  Cas9 reaction: We adapted the following protocol from \namedcite{briner2014}: mix \uL{5.0} water or \mM{30} theophylline and \uL{1.5} \uM{1.5} sgRNA; incubate at 95°C for \minute{3}, then at 4°C for \minute{1}; add \uL{5.48} water, \uL{1.5} 10x Cas9 buffer, and \uL{0.02} \uM{20} Cas9 (NEB M0386T) via master mix; incubate at room temperature for \minute{10}; add \uL{1.5} \nM{30} target DNA; pipet to mix; incubate at 37°C for \hour{1}; add \uL{0.09} \mgmL{20} RNase~A (Sigma R6148), \uL{0.09} \mgmL{20} Proteinase~K (Denville CB3210-5), and \uL{2.82} 6x loading dye via master mix; incubate at 37°C for \minute{20}, then at 55°C for \minute{20}; run the entire reaction (\uL{18}) on a 1\% agarose/TAE/GelRed gel at \Vcm{4.5} for \minute{70}.  Gel quantification: Band intensities were quantified using Fiji (1.51r).  The background was subtracted from each image using a \px{50} rolling ball radius.  The fraction of DNA cleaved in each lane was calculated:
 
 \begin{displaymath}
  \mathrm{f} = \frac{\mathrm{pixels}_\mathrm{2kb}}{\mathrm{pixels}_\mathrm{4kb} + \mathrm{pixels}_\mathrm{2kb}}
@@ -167,11 +162,32 @@ $ RNAfold --partfunc --MEA --motif \
     "GAUACCAGCCGAAAGGCCCUUGGCAGC,(...((((((....)))...)))...),-9.212741321099747"
 \end{verbatim}
 
+
+\section{Abbreviations}
+
+\begin{itemize}
+    \item FACS: Fluorescence activated cell sorting
+    \item GFP: Green fluorescent protein
+    \item RFP: Red fluorescent protein
+    \item CRISPRi: Clustered regularly interspaced short palindromic repeat inhibition
+\end{itemize}
+
 \section{Contributions}
 
-KK conceived the project, performed experiments, and wrote the paper.
+\begin{itemize}
+    \item KK conceived the project, performed most of the experiments, and wrote the paper.
+    \item JL performed many of the CRISPRi experiments.
+    \item KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiments.
+    \item CMF advised on the \invitro{} Cas9 experiments.
+    \item BLO advised on the FACS screens.
+    \item CF tested the ligRNAs in mammalian cells.
+    \item AHN and BMH tested the ligRNAS in yeast cells.
+    \item DFS, JAD, HES, and TK provided mentorship.
+\end{itemize}
 
-KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiments.
+\section{Acknowledgments}
+
+The authors would like to thank Kianna Zucker for her help cloning most of the constructs used in \reffig{2}d.
 
 \section{Figures}
 
@@ -287,13 +303,13 @@ KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiment
 
     \fignatsize{supp_mat/affinity_correlation}
 
-    \captitle{Correlation between ligRNA function and the amount of base-pairing between the spacer and the aptamer insert} Binding affinities (y-axis) were calculated using the \code{duplexfold} method from the python3 API of the VienaRNA package (version 2.4.3).  This method returns the minimum binding energy between two strand of RNA considering only inter-strand base pairs.  For each calculation, the first strand was one of the 24 \nt{20} spacer sequences used in the \invitro{} spacer assay (\refsupptab{spacer-assay}).  The second strand was \seq{GCCGAUACCAGCCGAAAGGCCCUUGGCAGCGAC} for \ligrnaF{} or \seq{GUGGGAUACCAGCCGAAAGGCCCUUGGCAGCCUAC} for \ligrnaB{}.  These sequences include both the aptamer and the randomized linker connecting the aptamer to the rest of the sgRNA scaffold.  Percent cleavage values (x-axis) are the means of three replicates from the \invitro{} spacer assay (\reffig{2}d).  Linear regressions (solid lines) and R-values are shown.
+    \captitle{Correlation between ligRNA function and the amount of base-pairing between the spacer and the aptamer insert} Binding affinities (y-axis) were calculated using the \code{duplexfold} method from the python3 API of the ViennaRNA package (version 2.4.3).  This method returns the minimum binding energy between two strand of RNA considering only inter-strand base pairs.  For each calculation, the first strand was one of the 24 \nt{20} spacer sequences used in the \invitro{} spacer assay (\refsupptab{spacer-assay}).  The second strand was \seq{GCCGAUACCAGCCGAAAGGCCCUUGGCAGCGAC} for \ligrnaF{} or \seq{GUGGGAUACCAGCCGAAAGGCCCUUGGCAGCCUAC} for \ligrnaB{}.  These sequences include both the aptamer and the randomized linker connecting the aptamer to the rest of the sgRNA scaffold.  Percent cleavage values (x-axis) are the means of three replicates from the \invitro{} spacer assay (\reffig{2}d).  Linear regressions (solid lines) and R-values are shown.
 
 \suppfig{j23150}
 
     \fignatsize{supp_mat/j23150}
 
-    \captitle{Sensor activity is predictably modulated by promoter strength.}  Flow cytometrytraces and fold change plots for three ligRNAs (the two discussed in the main text and a third "alternate" isolated from the same screen as \ligrnaF{}) in the context of strong (J23119) and weak (J23150) constitutive promoters.  All lines and symbols are described in \reffig{2}.  The alternate ligRNA actually has a larger dynamic range with the weaker promoter, and may be a useful for applications where lower concentrations of ligRNA are anticipated.
+    \captitle{Sensor activity is predictably modulated by promoter strength.}  Flow cytometry traces and fold change plots for three ligRNAs (the two discussed in the main text and a third "alternate" isolated from the same screen as \ligrnaF{}) in the context of strong (J23119) and weak (J23150) constitutive promoters.  All lines and symbols are described in \reffig{2}.  The alternate ligRNA actually has a larger dynamic range with the weaker promoter, and may be a useful for applications where lower concentrations of ligRNA are anticipated.
 
 \suppfig{vienna-predictions}
 
