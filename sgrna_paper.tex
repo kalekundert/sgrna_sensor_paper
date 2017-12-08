@@ -56,25 +56,62 @@
 
 %¶ All three solvent-exposed stems can be used to control the sgRNA (Fig 1b,1d,1e, Supp Tab [rational designs]).  Not enough to simply replace the stem.
 
-We began by quickly screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn which insertion sites were most sensitive to the presence of the theophylline aptamer \autocite{jenison1994}, and which strategies for linking the aptamer to the sgRNA were most effective.  Regarding insertion sites, we tried inserting the aptamer into each of the stems in \reffig{1}b, which are all solvent-exposed in the crystal structure of Cas9 in complex with sgRNA and DNA \autocite{nishimasu2014}.  Regarding linking strategies, we tried naively replacing different parts of each stem with the aptamer, splitting the sgRNA in half and using the aptamer to bring the halves together, and designing specific strand displacements for the \apo{} and \holo{} states.  We found functional sensors for all three insertion sites, and were most successful with the strand displacement strategy (\reffig{1}d, \refsupptab{rational-designs}).  All of these sensors could be titrated (\reffig{1}e).  We also unexpectedly learned that inserting the aptamer into the nexus region yields sensors that respond to the absence of theophylline, rather than to the presence of it.  Knowing how to design both ligand-activated and ligand-deactivated sgRNAs \invitro{}, we next sought to find sensors that would function robustly \invivo{}.
+We began by screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn which insertion sites were most sensitive to the presence of the theophylline aptamer \autocite{jenison1994}, and which strategies for linking the aptamer to the sgRNA were most effective.  Regarding insertion sites, we tried inserting the aptamer into each of the stems in \reffig{1}b, which are all solvent-exposed in the crystal structure of Cas9 in complex with sgRNA and DNA \autocite{nishimasu2014}.  Regarding linking strategies, we tried replacing different parts of each stem with the aptamer, splitting the sgRNA in half and using the aptamer to bring the halves together, and designing specific strand displacements for the \apo{} and \holo{} states.  We found functional sensors for all three insertion sites, and were most successful with the strand displacement strategy (\reffig{1}d, \refsupptab{rational-designs}).  All of these sensors could be titrated (\reffig{1}e).  We also unexpectedly learned that inserting the aptamer into the nexus region yields sensors that respond to the absence of theophylline, rather than to the presence of it.  Knowing how to design both ligand-activated and ligand-deactivated sgRNAs \invitro{}, we next sought to find sensors that would function robustly in Escherichia coli.
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T20:29:49.573Z:
+% 
+% > Escherichia coli
+% I think "in vivo" means animals for most biologists....  Let's be specific
+% 
+% ^.
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T20:27:07.592Z:
+% 
+% > All of these sensors could be titrated 
+% All?  make more specific which were tested
+% 
+% ^.
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T20:23:58.178Z:
+% 
+% > We began by screening 97 rational designs 
+% separate first section of the results into two paragaphs: 
+% 1) design strategy (Fig 1 current panels a-c) - this  is a key contribution of the paper!
+% 2) in vitro cleavage assay results
+% 
+% ^.
 
 %¶ We did a FACS screen to find linker sequences that would work well (Fig 2a,2b,2c, Supp Fig [in vitro in vivo]).
 
-We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only very weak activity in the CRISPRi assay (\refsuppfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsupptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of theophylline.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Without it, most of the sensors we isolated were specific for the spacer used in the first screens.  The most robust ligand-activated sensor (\ligrnaF{}; i.e. sgRNA that's active in the + ligand state) and ligand-deactivated sensor (\ligrnaB{}; i.e. sgRNA that's active in the − ligand state) that we isolated are shown in \reffig{2}b,c.  With a spacer that was not used in any of the screens, both sensors have a >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
+We used FACS screens based on the repression of GFP and RFP via CRISPRi to optimize our rational designs \invivo{}.  The strongest rational designs exhibited only weak activity in the CRISPRi assay (\refsuppfig{in-vitro-in-vivo}).  Since we previously found the base-pairing of the linker sequence to be important, we designed libraries with randomized linkers for all three insertion sites \refsupptab{libraries}.  For each library, we performed the four screens outlined in \reffig{2}a.  The first two screens select and counter-select for activity in the presence (or absence) of theophylline.  The second two screens do the same, but in the context of a different spacer.  Swapping the spacer is a crucial step.  Without it, most of the sensors we isolated were specific for the spacer used in the first screens.  The most robust ligand-activated sensor (\ligrnaF{}; i.e. sgRNA that's active in the + ligand state) and ligand-deactivated sensor (\ligrnaB{}; i.e. sgRNA that's active in the − ligand state) that we isolated are shown in \reffig{2}b,c.  With a spacer that was not used in any of the screens, both sensors have a >10x dynamic range and negligible overlap between the active and inactive populations (\reffig{2}b,c).
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T20:31:01.304Z:
+% 
+% > Since we previously found the base-pairing of the linker sequence to be importan
+% not clear from previous section - highlight more specifically when explaining the rational design strategy
+% 
+% ^.
 
 %¶ Our designs are spacer-independent (Fig 2d, Supp Fig [spacer-gel], [affinity-correlation]).
 % * <kale@thekunderts.net> 2017-12-03T08:40:25.474Z:
 % 
 % I kinda want to remove the reference to {spacer-gel}, i.e. Fig S2.  I think it distracts from the point without really adding anything.
 % 
+% ^ <kortemme@cgl.ucsf.edu> 2017-12-07T20:35:15.645Z:
+% 
+% yes - would do this:
+% "... Cas 9 cleavage assay (Figure 2d, Figure S2, Table S4)." and delete "One of the gels for the top-left spacer is shown for perspective (\refsuppfig{spacer-gel})"
+% 
 % ^.
-Because RNA devices are known to be influenced by the sequences surrounding them \autocite{liang2012}, we tested \ligrnaF{} and \ligrnaB{} in the context of 24 randomly chosen spacers using our \invitro{} Cas9 cleavage assay (\reffig{2}d, \refsupptab{spacer-assay}).  One of the gels for the top-left spacer is shown for perspective (\refsuppfig{spacer-gel}).  Both sensors respond to theophylline for the majority of the tested spacers.  We predicted the affinity between each spacer and the aptamer (plus its associated linker) for both ligRNAs to test the hypothesis that base-pairing with the aptamer could explain why the minority of spacers are detrimental to function (\refsuppfig{affinity-correlation}).  For \ligrnaF{} the correlation is negligible, but for the \ligrnaB{} it seems prudent to choose spacers with weak affinity for the aptamer, preferably weaker than \kcalmol{-15}.  These results suggest that ligRNAs should be capable of regulating most genes, especially those that can be targeted by multiple spacers.
+Because RNA devices are known to be influenced by the sequences surrounding them \autocite{liang2012}, we tested \ligrnaF{} and \ligrnaB{} in the context of 24 different spacers using our \invitro{} Cas9 cleavage assay (\reffig{2}d, \refsupptab{spacer-assay}).  One of the gels for the top-left spacer is shown for perspective (\refsuppfig{spacer-gel}).  Both sensors respond to theophylline for the majority of the tested spacers.  We predicted the affinity between each spacer and the aptamer (plus its associated linker) for both ligRNAs to test the hypothesis that base-pairing with the aptamer could explain why the minority of spacers are detrimental to function (\refsuppfig{affinity-correlation}).  For \ligrnaF{} the correlation is negligible, but for the \ligrnaB{} it seems prudent to choose spacers with weak affinity for the aptamer, preferably weaker than \kcalmol{-15}.  These results suggest that ligRNAs should be capable of regulating most genes, especially those that can be targeted by multiple spacers.
 
 %¶ Our designs exhibit a remarkably graded response to theophylline  (Fig 2e).  Inflection point is ...  Smooth response, wide range, maybe useful for tuning gene expression.  EC50 much greater than theophylline Kd.
 
 % The Carothers2010 reference doesn't quite make the point I'm trying to make.  I should keep looking to see if I can find a paper that deals with the difference between Kd and EC50 more directly.
 
 Next, we tested the ligRNAs with decreasing concentrations of theophylline (\reffig{2}e).  We observed that both sensors were smoothly titratable and exhibited a nearly linear response over a 50x range of ligand concentration.  One thing to note is that the apparent EC50 of the ligRNAs (about \uM{280}) is much higher than the $\mathsf{K_D}$ of the theophylline aptamer alone (\nM{320}) \autocite{jenison1994}.  This discrepancy is common for RNA devices, and could be explained by the conditions in the cytoplasm \autocite{carothers2010} and the extra cost associated with refolding the device in addition to the aptamer (and possibly assembling the Cas9 complex, in this case).  Regardless, the titration confirms that the ligRNAs respond to theophylline and demonstrates that they may be useful for not just turning genes on or off, but also for precisely controlling their levels of expression.
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T20:36:54.090Z:
+% 
+% > could be explained by the conditions in the cytoplasm 
+% make less vague
+% 
+% ^.
 
 %¶ Our designs are not sensitive to the expression level of the sgRNA (Supp Fig [j23150]).
 
@@ -91,6 +128,18 @@ We sought to understand the mechanism by which ligRNAs are activated and deactiv
 %¶ ligRNA⁻ can be used to control two genes with two different ligands (Fig 3, Supp Fig [ligand-matrix]).
 
 Finally, we tested whether ligRNAs could be used to simultaneously control two different genes with two different ligands.  The two ligands we used were theophylline (theo) and 3-methylxanthine (3mx).  The corresponding aptamers differ in only one position, so we simply replaced one aptamer with the other without further optimization.  \ligrnaF was negatively affected by this naive approach (\refsuppfig{ligand-matrix}) but \ligrnaB was not, so we used only the latter to construct a system that expresses GFP upon addition of theophylline and expresses GFP and RFP upon addition of both ligands (\reffig{3}a,b).  We then performed a timecourse where we sequentially activated, deactivated, and reactivated both reporter genes using ligRNAs (\reffig{3}c).  The caveat with this particular ligand pair is that the aptamers are not orthogonal because the theophylline aptamer is triggered by both ligands.  Despite this, we've demonstrated that ligRNAs can be used to sequentially activate two different genes.
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T20:41:40.766Z:
+% 
+% > we've
+% no contractions...
+% 
+% ^.
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T20:40:52.537Z:
+% 
+% > Finally, we tested whether ligRNAs could be used to simultaneously control two different genes with two different ligands
+% highlight importance - this experiment is key!
+% 
+% ^.
 
 % This paragraphs ends with "despite", and the next paragraph start with it.  I should find a different word to use.
 
@@ -101,10 +150,22 @@ Finally, we tested whether ligRNAs could be used to simultaneously control two d
 %¶ Our ligRNAs are not functional in eukaryotic systems (Supp Fig [mammalian data], [yeast data]).  We believe this is because ....  Pitch project as proof-of-concept for future work.
 
 Despite functioning robustly in bacteria, we were unable to successfully transfer the ligRNAs to eukaryotic systems.  We first tried a gene-editing assay in a HEK293-based cell line, and observed no editing for any of the ligRNAs at any non-lethal concentration of theophylline (\refsuppfig{mammalian-data}).  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and either no repression or full repression for \ligrnaB{} depending on the spacer sequence (\refsuppfig{yeast-data}).  Given that the mechanisms of the ligRNAs as we understand them are not in any way specific to bacteria, we believe that getting ligRNAs to function in eukaryotic systems will require a careful optimization of conditions and perhaps the sequences linking the aptamer to the sgRNA scaffold, but not a dramatic change in philosophy.  In this respect, the current work is a proof-of-concept for the idea of using aptamers to directly manipulate the structure of sgRNA molecules.
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T22:29:38.989Z:
+% 
+% >  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and either no repression or full repression for \ligrnaB{} depending on the spacer sequence (\refsuppfig{yeast-data}). 
+% Is this from Ben's and Andrew's data?  Have they (or you) repeated these experiments to confirm?
+% 
+% ^.
 
 %¶ There have been two other ligand-controlled sgRNA systems described recently.  Compared to these, our system ... (is better).
 
 Two other ligand-controlled sgRNA systems have been described recently \autocite{liu2016,tang2017}.  \namedcite{liu2016} introduce a sequence with complementarity to the spacer on the 3' side of the sgRNA and use an aptamer-based strand displacement strategy to dislodge it in the presence of ligand.  \namedcite{tang2017} introduce a sequence with complementarity to the spacer on the 5' side of the sgRNA and use a ligand-controlled hammerhead ribozyme to cleave it off upon the addition of ligand.  ligRNAs have some significant advantages over both these approaches.  First, ligRNAs can be used to both activate and deactivate Cas9, whereas the previously reported systems can only activate it.  Second, ligRNAs can be easily incorporated into libraries because they don't require any complementarity with the spacer sequence.  Third, ligRNAs have the smoothest titration curves, allowing for the most graded control of gene expression.  And fourth, ligRNAs have the largest dynamic range by virtue of being screened for, rather than being rationally designed.  The disadvantages of the ligRNA system are that it has not been tested with as many aptamers as \namedcite{liu2016} and does not yet function in eukaryotic systems.
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T22:25:25.333Z:
+% 
+% > Two other ligand-controlled sgRNA systems have been described recently
+% mention prior work in the introduction instead and use it to motivate what we set out to do differently / better
+% 
+% ^.
 
 %¶ We believe that it will be increasingly important to study the spatial and temporal dependencies on genetic circuits, and believe that high-throughput way to regulate gene expression will be critical in the endeavor.
 
@@ -255,7 +316,7 @@ The authors would like to thank Anna Simon for presenting the ideas that motivat
 
  \tabonecol{table_1/summary_tabular}
 
- \captitle{Summary of rational design results.}  The results are organized by the design strategy we employed and the domain the sgRNA was inserted into.  We tested 97 designs and found 10 that were active, including at least one active design for each domain.  We considered a design active if it exhibited a >15\% change in cleavage in response to theophylline; 15\% is about the point at which the difference is clearly visible on a gel.
+ \captitle{Summary of rational design results.}  The results are organized by the design strategy we employed and the domain the sgRNA was inserted into.  We tested 97 designs and found 10 that were active, including at least one active design for each domain.  We considered a design active if it exhibited a >15\% change in cleavage in response to theophylline. 
 
 \section{Supplementary Materials}
 
@@ -281,7 +342,13 @@ The authors would like to thank Anna Simon for presenting the ideas that motivat
     Domain: Where in the sgRNA the aptamer was inserted.
     Cleavage: The percent of DNA that was cleaved by a design in the \invitro{} assay.  The \apo{} and \holo{} columns refer to the cleavage with and without theophylline, respectively, the Δ column is the difference between those, and the σ column is the standard deviation of the Δ values for the designs with more than one replicate.  All the percentages are the average of any replicates and are rounded to the nearest 1.
     N: The number of replicates for each design.
-    Active: We considered a design to be active if it exhibited a >15\% change in cleavage in response to ligand.  15\% is about the point at which the difference is clearly visible on a gel.
+    Active: We considered a design to be active if it exhibited a >15\% change in cleavage in response to ligand.  
+% * <kortemme@cgl.ucsf.edu> 2017-12-07T20:10:33.659Z:
+% 
+% > Active
+% I don't think we can call a design "active" if the standard deviation is larger than the signal -  as for 2 of the stem replacement designs (i.e. 15+/- 21% etc).  Actually, looking at this in more detail, should only list standard deviation for N=>3
+% 
+% ^.
     Sequence: The sequence of the design, including the spacer AAVS spacer used in this assay.
 
 \supptab{spacer-assay}
