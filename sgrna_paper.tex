@@ -75,7 +75,7 @@ Two other ligand-controlled sgRNA systems have been described recently \autocite
 
 %¶ All three solvent-exposed stems can be used to control the sgRNA (Fig 1b,1d,1e, Supp Tab [rational designs]).  Not enough to simply replace the stem.
 
-We began by screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn which insertion sites were most sensitive to the presence of the theophylline aptamer \autocite{jenison1994}, and which strategies for linking the aptamer to the sgRNA were most effective.  Regarding insertion sites, we tried inserting the aptamer into each of the stems in \reffig{1}b, which are all solvent-exposed in the crystal structure of Cas9 in complex with sgRNA and DNA \autocite{nishimasu2014}.  Regarding linking strategies, we tried replacing different parts of each stem with the aptamer, splitting the sgRNA in half and using the aptamer to bring the halves together, and designing specific strand displacements for the \apo{} and \holo{} states.  We found functional sensors for all three insertion sites, and were most successful with the strand displacement strategy (\reffig{1}d, \refsupptab{rational-designs}).  All of these sensors could be titrated (\reffig{1}e).  We also unexpectedly learned that inserting the aptamer into the nexus region yields sensors that respond to the absence of theophylline, rather than to the presence of it.  Knowing how to design both ligand-activated and ligand-deactivated sgRNAs \invitro{}, we next sought to find sensors that would function robustly in Escherichia coli.
+We began by screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn which insertion sites were most sensitive to the presence of the theophylline aptamer \autocite{jenison1994}, and which strategies for linking the aptamer to the sgRNA were most effective.  Regarding insertion sites, we tried inserting the aptamer into each of the stems in \reffig{1}b, which are all solvent-exposed in the crystal structure of Cas9 in complex with sgRNA and DNA \autocite{nishimasu2014}.  Regarding linking strategies, we tried replacing different parts of each stem with the aptamer, splitting the sgRNA in half and using the aptamer to bring the halves together, and designing specific strand displacements for the \apo{} and \holo{} states.  We found functional sensors for all three insertion sites, and were most successful with the strand displacement strategy (\reffig{1}d, \refsupptab{rational-designs}).  All of these sensors could be titrated (\reffig{1}e).  We also unexpectedly learned that inserting the aptamer into the nexus region yields sensors that respond to the absence of theophylline, rather than to the presence of it.  Knowing how to design both ligand-activated and ligand-deactivated sgRNAs \invitro{}, we next sought to find sensors that would function robustly in \ecoli{}.
 % * <kortemme@cgl.ucsf.edu> 2017-12-07T20:29:49.573Z:
 % 
 % > Escherichia coli
@@ -117,19 +117,27 @@ We used FACS screens based on the repression of GFP and RFP via CRISPRi to optim
 % yes - would do this:
 % "... Cas 9 cleavage assay (Figure 2d, Figure S2, Table S4)." and delete "One of the gels for the top-left spacer is shown for perspective (\refsuppfig{spacer-gel})"
 % 
+% ^ <kale@thekunderts.net> 2017-12-09T00:29:07.997Z:
+% 
+% Ok, done.
+%
 % ^.
-Because RNA devices are known to be influenced by the sequences surrounding them \autocite{liang2012}, we tested \ligrnaF{} and \ligrnaB{} in the context of 24 different spacers using our \invitro{} Cas9 cleavage assay (\reffig{2}d, \refsupptab{spacer-assay}).  One of the gels for the top-left spacer is shown for perspective (\refsuppfig{spacer-gel}).  Both sensors respond to theophylline for the majority of the tested spacers.  We predicted the affinity between each spacer and the aptamer (plus its associated linker) for both ligRNAs to test the hypothesis that base-pairing with the aptamer could explain why the minority of spacers are detrimental to function (\refsuppfig{affinity-correlation}).  For \ligrnaF{} the correlation is negligible, but for the \ligrnaB{} it seems prudent to choose spacers with weak affinity for the aptamer, preferably weaker than \kcalmol{-15}.  These results suggest that ligRNAs should be capable of regulating most genes, especially those that can be targeted by multiple spacers.
+Because RNA devices are known to be influenced by the sequences surrounding them \autocite{liang2012}, we tested \ligrnaF{} and \ligrnaB{} in the context of 24 different spacers using our \invitro{} Cas9 cleavage assay (\reffig{2}d, \refsuppfig{spacer-gel}, \refsupptab{spacer-assay}).  Both sensors respond to theophylline for the majority of the tested spacers.  We predicted the affinity between each spacer and the aptamer (plus its associated linker) for both ligRNAs to test the hypothesis that base-pairing with the aptamer could explain why the minority of spacers are detrimental to function (\refsuppfig{affinity-correlation}).  For \ligrnaF{} the correlation is negligible, but for the \ligrnaB{} it seems prudent to choose spacers with weak affinity for the aptamer, preferably weaker than \kcalmol{-15}.  These results suggest that ligRNAs should be capable of regulating most genes, especially those that can be targeted by multiple spacers.
 
 %¶ Our designs exhibit a remarkably graded response to theophylline  (Fig 2e).  Inflection point is ...  Smooth response, wide range, maybe useful for tuning gene expression.  EC50 much greater than theophylline Kd.
 
 % The Carothers2010 reference doesn't quite make the point I'm trying to make.  I should keep looking to see if I can find a paper that deals with the difference between Kd and EC50 more directly.
 
-Next, we tested the ligRNAs with decreasing concentrations of theophylline (\reffig{2}e).  We observed that both sensors were smoothly titratable and exhibited a nearly linear response over a 50x range of ligand concentration.  One thing to note is that the apparent EC50 of the ligRNAs (about \uM{280}) is much higher than the $\mathsf{K_D}$ of the theophylline aptamer alone (\nM{320}) \autocite{jenison1994}.  This discrepancy is common for RNA devices, and could be explained by the conditions in the cytoplasm \autocite{carothers2010} and the extra cost associated with refolding the device in addition to the aptamer (and possibly assembling the Cas9 complex, in this case).  Regardless, the titration confirms that the ligRNAs respond to theophylline and demonstrates that they may be useful for not just turning genes on or off, but also for precisely controlling their levels of expression.
+Next, we tested the ligRNAs with decreasing concentrations of theophylline (\reffig{2}e).  We observed that both sensors were smoothly titratable and exhibited a nearly linear response over a 50x range of ligand concentration.  One thing to note is that the apparent EC50 of the ligRNAs (about \uM{280}) is much higher than the $\mathsf{K_D}$ of the theophylline aptamer alone (\nM{320}) \autocite{jenison1994}.  This discrepancy is common for RNA devices, and could be explained by the magnesium concentrations in the cytoplasm \autocite{carothers2010} and the extra cost associated with refolding the device in addition to the aptamer (and possibly assembling the Cas9 complex, in this case).  Regardless, the titration confirms that the ligRNAs respond to theophylline and demonstrates that they may be useful for not just turning genes on or off, but also for precisely controlling their levels of expression.
 % * <kortemme@cgl.ucsf.edu> 2017-12-07T20:36:54.090Z:
 % 
 % > could be explained by the conditions in the cytoplasm 
 % make less vague
 % 
+% ^ <kale@thekunderts.net> 2017-12-09T00:28:07.442Z:
+% 
+% done.
+%
 % ^.
 
 %¶ Our designs are not sensitive to the expression level of the sgRNA (Supp Fig [j23150]).
@@ -146,12 +154,16 @@ We sought to understand the mechanism by which ligRNAs are activated and deactiv
 
 %¶ ligRNA⁻ can be used to control two genes with two different ligands (Fig 3, Supp Fig [ligand-matrix]).
 
-Finally, we tested whether ligRNAs could be used to simultaneously control two different genes with two different ligands.  The two ligands we used were theophylline (theo) and 3-methylxanthine (3mx).  The corresponding aptamers differ in only one position, so we simply replaced one aptamer with the other without further optimization.  \ligrnaF was negatively affected by this naive approach (\refsuppfig{ligand-matrix}) but \ligrnaB was not, so we used only the latter to construct a system that expresses GFP upon addition of theophylline and expresses GFP and RFP upon addition of both ligands (\reffig{3}a,b).  We then performed a timecourse where we sequentially activated, deactivated, and reactivated both reporter genes using ligRNAs (\reffig{3}c).  The caveat with this particular ligand pair is that the aptamers are not orthogonal because the theophylline aptamer is triggered by both ligands.  Despite this, we've demonstrated that ligRNAs can be used to sequentially activate two different genes.
+Finally, we tested whether ligRNAs could be used to simultaneously control two different genes with two different ligands.  The two ligands we used were theophylline (theo) and 3-methylxanthine (3mx).  The corresponding aptamers differ in only one position, so we simply replaced one aptamer with the other without further optimization.  \ligrnaF was negatively affected by this naive approach (\refsuppfig{ligand-matrix}) but \ligrnaB was not, so we used only the latter to construct a system that expresses GFP upon addition of theophylline and expresses GFP and RFP upon addition of both ligands (\reffig{3}a,b).  We then performed a timecourse where we sequentially activated, deactivated, and reactivated both reporter genes using ligRNAs (\reffig{3}c).  The caveat with this particular ligand pair is that the aptamers are not orthogonal because the theophylline aptamer is triggered by both ligands.  Despite this, we have demonstrated that ligRNAs can be used to sequentially activate two different genes.
 % * <kortemme@cgl.ucsf.edu> 2017-12-07T20:41:40.766Z:
 % 
 % > we've
 % no contractions...
 % 
+% ^ <kale@thekunderts.net> 2017-12-09T00:27:15.283Z:
+% 
+% ok. :-)
+%
 % ^.
 % * <kortemme@cgl.ucsf.edu> 2017-12-07T20:40:52.537Z:
 % 
