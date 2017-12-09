@@ -34,16 +34,6 @@
 
 %¶ Introduction (Fig 1a)
 
-%¶ It would be useful to regulate Cas9
-
-    %§ Cas9 is amazing
-
-    %§ But for reason X, Y, Z, it would be good to have better control.
-
-    %§ Briefly review Cas9-based strategies
-
-    %§ End by suggesting that sgRNA-based strategies are the most modular.
-
 Ever since CRISPR/Cas9 emerged as a powerful system for engineering and studying biology, there has been broad interest in developing tools to better regulate its activity.  Such tools promise to help mitigate off-target effects and to allow the study of more complex biological perturbations \autocite{richter2017}.  To date, this problem has been approached by using a split-Cas9 construct \autocite{zetsche2015,nguyen2016,nihongaki2015}, incorporating unnatural caged amino acids into Cas9 \autocite{hemphill2015,luo2016}, fusing ligand-dependent localization signals to Cas9 \autocite{liuramli2016}, and inserting ligand- or light-sensitive domains into Cas9 \autocite{oakes2016,richter2016}.  These approaches, which focus on engineering Cas9 itself, are limited for applications involving gene expression (e.g. CRISPRi or CRISPRa) in that every gene being targeted will be regulated in the same way; there's no way to independently regulate different genes.
 
 %¶ Our strategy is to insert an aptamer into the guide RNA...
@@ -53,7 +43,51 @@ Ever since CRISPR/Cas9 emerged as a powerful system for engineering and studying
 
     %§ Succinctly list benefits of my approach.
 
-The alternative is to focus on engineering Cas9's guide RNA (sgRNA).  
+The alternative is to focus on engineering Cas9's guide RNA (sgRNA).  This approach has also been explored, but not as thoroughly.  One pair of methods is based on the idea of using an aptamer to control whether the \nt{20} target sequence (more succinctly called the spacer) is blocked by a complementary sequence installed in the sgRNA \autocite{liu2016,tang2017}.  Another method is based on the idea of using the sgRNA to recruit protein regulators that need to be stabilized by a ligand to avoid degradation \autocite{maji2017}.  
+
+Our goal in this study was to 
+
+The alternative is to focus on engineering Cas9's guide RNA (sgRNA).  This approach has also been explored, but not as thoroughly.  One pair of methods is based on the idea of attaching a sequence to the sgRNA that can base pair with the \nt{20} target sequence (more succinctly called the spacer) and using an aptamer to control that base pairing \autocite{liu2016,tang2017}.  Another method is based on the idea of making protein regulators that are recruited by modified sgRNAs, but that need to be stabilized by a ligand to avoid being degraded \autocite{maji2017}.  
+
+attaching a sequence to the sgRNA that can base pair with the \nt{20} target sequence (more succinctly called the spacer) and using an aptamer to control that base pairing 
+
+Our goal in this study was to insert an aptamer into the sgRNA such that the function of the 
+
+This approach is more modular because 
+
+This was the approach taken by \namedcite{liu2016}, who introduced a sequence on the 3' side of the sgRNA with complementarity to the \nt{20} target sequence (also called the spacer) and used an aptamer-based strand displacement strategy to dislodge it in the presence of ligand, and \namedcite{tang2017}, who introduced a sequence on the 5' side of the sgRNA with complementarity to the spacer and used a ligand-controlled hammerhead ribozyme to cleave it off upon the addition of ligand.
+
+This was the approach taken by \namedcite{liu2016} and \namedcite{tang2017}, who both appended sequences to the sgRNA that were complementary to the \nt{20} target sequence (more succinctly called the spacer) and used ligand-controlled aptamers to control whether or not 
+
+Both studies put the sgRNA under the control of a small-molecule ligand by 
+
+This approach has also been explored, but not as thoroughly.  Two methods have been published based on the idea of appending a sequence to the sgRNA that is complementary to the \nt{20} target sequence (more succinctly called the spacer).  The first used an aptamer-based strand-displacement strategy to dislodge the complementary sequence \autocite{liu2016}, while the second used a ligand-controlled hammerhead ribozyme to cleave it off \autocite{tang2017}.  In contrast, our goal in this study was to 
+
+This approach has also been explored, but not as thoroughly.  \namedcite{liu2016} attached a sequence to the sgRNA that blocks the \nt{20} target sequence (more succinctly called the spacer) by base pairing with it, and used an aptamer-based strand-displacement strategy to 
+
+\namedcite{tang2017} attached a similar blocking sequence, but used a ligand-controlled hammerhead ribozyme to cleave it off.
+
+was complementary to the \nt{20} target sequence (more succinctly called the spacer) and used an aptamer-based strand-displacement strategy to dislodge it. 
+
+the complementary sequence \autocite{liu2016}, while the second used a ligand-controlled hammerhead ribozyme to cleave it off \autocite{tang2017}.  In contrast, our goal in this study was to 
+
+This approach has also been explored, but not as thoroughly.  Existing methods are based on the idea of attaching a sequence to the sgRNA that can base-pair with the \nt{20} target sequence (more succinctly called the spacer) and using a small-molecule aptamer to control that base pairing.
+
+Existing methods either require protein expression and significant host-cell machinery \autocite{???}, 
+
+
+Our goal in this study is 
+
+
+using the sgRNA to recruit protein regulators that 
+
+The approach we take here is to insert an aptamer into the
+
+Our approach is 
+
+This approach has also been studied, although not as broadly as 
+
+, which is the approach we take here.  This approach has also been taken before
 
 %¶ There have been two other ligand-controlled sgRNA systems described recently.  Compared to these, our system ... (is better).
 
