@@ -161,16 +161,22 @@ Finally, we tested whether ligRNAs could be used to simultaneously control two d
 
 % The discussion section explains how the results have filled the gap that was identified in the introduction, provides caveats to the interpretation, and describes how the paper advances the field by providing new opportunities.  This is typically done by recapitulating the results, discussing the limitations, and then revealing how the central contribution may catalyze future progress.
 
-%¶ Our ligRNAs are not functional in eukaryotic systems (Supp Fig [mammalian data], [yeast data]).  We believe this is because ....  Pitch project as proof-of-concept for future work.
-
-% I should end this paragraph by discussing the strengths of my system in bacteria, i.e. many interesting bacteria that don't have genetic controls, my system has very little genetic footprint, don't even necessarily need promoters, other systems don't work in bacteria.  That let's me end this paragraph, which starts out negatively, on a positive note.  I should also make the discussion of the negative results more succinct.  The supplemental figures will have captions if you want to know more.
-
-Although ligRNAs function robustly in bacteria, we were unable to successfully transfer them to eukaryotic systems.  We first tried a gene-editing assay in a HEK293-based cell line, and observed no editing for any of the ligRNAs at any non-lethal concentration of theophylline (\refsuppfig{mammalian-data}).  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and depending on the spacer sequence either no repression or full repression for \ligrnaB{} (\refsuppfig{yeast-data}).  Optimizing the ligRNAs for eukaryotic systems could be the focus of future work.  Regardless, ligRNAs have the potential to be a useful tool even if they only ever function in bacteria.  First, many interesting (e.g. pathogenic or symbiotic) species of bacteria do not have facile genetic controls available, and ligRNAs provide such controls with a very minimal footprint.  Second, temporal interactions between genes are known to be important for disease \autocite{MISSING-REF}, and ligRNAs provide a way to conduct large-scale screens for similar effects in the interactions between bacteria and their environments.
+%¶ Our ligRNAs are not functional in eukaryotic systems (Supp Fig [mammalian data], [yeast data]) but are still useful in bacteria.
+% * <kale@thekunderts.net> 2017-12-11T21:53:37.073Z:
+% 
+% I rewrote the second half of this paragraph to focus on potential applications in bacteria.  I think it helps a lot to end the paper on a more optimistic note.  The question is whether I should mention that the Liu constructs didn't work in bacteria in our hands.  I left it out for now; I felt the paragraph was strong enough without it.  But it's something to think about.
+% 
+% ^.
+Although ligRNAs function robustly in bacteria, we were unable to successfully transfer them to eukaryotic systems.  We first tried a gene-editing assay in a HEK293-based cell line, and observed no editing for any of the ligRNAs at any non-lethal concentration of theophylline (\refsuppfig{mammalian-data}).  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and depending on the spacer sequence either no repression or full repression for \ligrnaB{} (\refsuppfig{yeast-data}).  Optimizing the ligRNAs for eukaryotic systems could be the focus of future work.  Regardless, ligRNAs have the potential to be a very useful tool even if they only ever function in bacteria.  First, many interesting (e.g. pathogenic or symbiotic) species of bacteria do not have facile genetic controls available, and ligRNAs provide such controls with a very minimal footprint.  Second, temporal interactions between genes are known to be important for disease \autocite{MISSING-REF}, and ligRNAs provide a way to conduct large-scale screens for similar effects in the interactions between bacteria and their environments.
 % * <kortemme@cgl.ucsf.edu> 2017-12-07T22:29:38.989Z:
 % 
 % >  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and either no repression or full repression for \ligrnaB{} depending on the spacer sequence (\refsuppfig{yeast-data}). 
 % Is this from Ben's and Andrew's data?  Have they (or you) repeated these experiments to confirm?
 % 
+% ^ <kale@thekunderts.net> 2017-12-11T22:39:22.520Z:
+% 
+% It's their data.  I never repeated these experiments myself.  I sent them an email asking for clarification.
+%
 % ^.
 
 %¶ We believe that it will be increasingly important to study the spatial and temporal dependencies on genetic circuits, and believe that high-throughput way to regulate gene expression will be critical in the endeavor.
