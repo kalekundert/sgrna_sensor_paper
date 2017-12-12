@@ -167,7 +167,7 @@ Finally, we tested whether ligRNAs could be used to simultaneously control two d
 % I rewrote the second half of this paragraph to focus on potential applications in bacteria.  I think it helps a lot to end the paper on a more optimistic note.  The question is whether I should mention that the Liu constructs didn't work in bacteria in our hands.  I left it out for now; I felt the paragraph was strong enough without it.  But it's something to think about.
 % 
 % ^.
-Although ligRNAs function robustly in bacteria, we were unable to successfully transfer them to eukaryotic systems.  We first tried a gene-editing assay in a HEK293-based cell line, and observed no editing for any of the ligRNAs at any non-lethal concentration of theophylline (\refsuppfig{mammalian-data}).  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and depending on the spacer sequence either no repression or full repression for \ligrnaB{} (\refsuppfig{yeast-data}).  Optimizing the ligRNAs for eukaryotic systems could be the focus of future work.  Regardless, ligRNAs have the potential to be a very useful tool even if they only ever function in bacteria.  First, many interesting (e.g. pathogenic or symbiotic) species of bacteria do not have facile genetic controls available, and ligRNAs provide such controls with a very minimal footprint.  Second, temporal interactions between genes are known to be important for disease \autocite{lee2012}, and ligRNAs provide a way to conduct large-scale screens for similar effects in the interactions between bacteria and their environments.
+Although ligRNAs function robustly in bacteria, we were unable to successfully transfer them to eukaryotic systems.  We first tried a gene-editing assay in a HEK293-based cell line, and observed no editing for any of the ligRNAs at any non-lethal concentration of theophylline (\refsuppfig{mammalian-data}).  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and depending on the spacer sequence either no repression or full repression for \ligrnaB{} (\refsuppfig{yeast-data}).  Optimizing the ligRNAs for eukaryotic systems is a promising direction for future work.  Regardless, ligRNAs have the potential to be a very useful tool even if they only ever function in bacteria.  First, many interesting (e.g. pathogenic or symbiotic) species of bacteria do not have facile genetic controls available, and ligRNAs provide such controls with a very minimal footprint.  Second, temporal interactions between genes are known to be important for disease \autocite{lee2012}, and ligRNAs provide a way to conduct large-scale screens for similar effects in the interactions between bacteria and their environments.
 % * <kortemme@cgl.ucsf.edu> 2017-12-07T22:29:38.989Z:
 % 
 % >  We then tried a gene-repression assay in yeast strain BY4741, and observed no repression for \ligrnaF{} and either no repression or full repression for \ligrnaB{} depending on the spacer sequence (\refsuppfig{yeast-data}). 
@@ -426,15 +426,18 @@ The authors would like to thank Anna Simon for presenting the ideas that motivat
 
 \suppfig{ligand-matrix}
 
-    Coming soon...
+    \fignatsize{supp_mat/ligand_matrix}
 
-\suppfig{mammalian-data}
-
-    Coming soon...
+    \captitle{ligRNA function in the context of different spacers and ligands} 
+    We built versions of each ligRNA with both the theophylline aptamer (purple heading) and the 3-methylxanthine aptamer (magenta heading), then tested them with three different ligands: caffeine (caff), theophylline (theo), and 3-methylxanthine (3mx).  Caffeine is a negative control; it is chemically similar to both theophylline and 3-methylxanthine, but it doesn't interact with either aptamer.  The reported values fold changes are relative to treatment with no ligand (i.e. water-only) and are calculated from the modes of cell populations measured by flow cytometry.  Panels (a-d) show data for the G1, R1, G2, and R2 spacers, respectively.  Note that 3-methylxanthine significantly activates the theophylline aptamer, but that the reverse is much less true, especially for \ligrnaB{}.  None of the ligRNAs were very active with the G2 spacer.  Unfortunately, we cannot rationalize this.  The positive and negative controls for G2 repressed and expressed GFP as expected (data not shown) and the predicted affinities between the G2 spacer and the two aptamers are very weak (\kcalmol{-3.1}, compare to \refsuppfig{affinity-correlation}).
 
 \suppfig{yeast-data}
 
-    Coming soon...
+    Yeast data from the El Samad lab, coming soon...
+
+\suppfig{mammalian-data}
+
+    Mammalian data from the Doudna lab, coming soon...
 
 \printbibliography[title=References]
 

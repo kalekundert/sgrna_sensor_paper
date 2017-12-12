@@ -16,7 +16,7 @@ context = {
         ('Positive control', from_name('on')),
         (r'Negative control \autocite{briner2014}', from_name('off')),
         (r'\ligrnaF{}', from_name('mhf/30')),
-        (r'alt-\ligrnaF{}', from_name('mhf/37')),
+        (r'\ligrnaFF{}', from_name('mhf/37')),
         (r'\ligrnaB{}', from_name('rxb/11/1')),
     ]
 }
