@@ -17,11 +17,13 @@
 \author[1]{Hana El-Samad}
 \author[1]{Tanja Kortemme}
 
-\affil[1]{Graduate Program in Biophysics, University of California San Francisco, San Francisco, California, USA}
+\affil[1]{Graduate Group in Biophysics, University of California San Francisco, San Francisco, California, USA}
 \affil[2]{UCSF/UCB Graduate Program in Bioengineering, University of California San Francisco, San Francisco, California, USA}
 \affil[3]{Department of Molecular and Cell Biology, University of California, Berkeley, Berkeley, California, USA}
 \affil[4]{Chemistry and Chemical Biology Graduate Program, University of California San Francisco, San Francisco, California, USA}
-
+\affil[5]{Howard Hughes Medical Institute, University of California, Berkeley, CA 94720 USA}
+\affil[6]{California Institute for Quantitative Biosciences, University of California, Berkeley, CA 94720 USA}
+\affil[*]{To whom correspondence should be addressed}
 \date{}
 
 \maketitle{}
@@ -42,7 +44,7 @@ We present a new method for achieving small-molecule control of Cas9, based on t
 
 %¶ Introduce Cas9, briefly review Cas9 engineering.
 
-Ever since CRISPR/Cas9 emerged as a powerful system for engineering and studying biology, there has been broad interest in developing tools to better regulate its activity.  Such tools promise to help mitigate off-target effects and to allow the study of more complex biological perturbations \autocite{richter2017}.  To date, this problem has been approached by using a split-Cas9 construct \autocite{zetsche2015,nguyen2016,nihongaki2015}, incorporating unnatural caged amino acids into Cas9 \autocite{hemphill2015,luo2016}, fusing ligand-dependent localization signals to Cas9 \autocite{liuramli2016}, and inserting ligand- or light-sensitive domains into Cas9 \autocite{oakes2016,richter2016}.  These approaches, which focus on engineering Cas9 itself, are limited for applications involving gene expression (e.g. CRISPRi or CRISPRa) in that every gene being targeted will be regulated in the same way; there's no way to independently regulate different genes.
+CRISPR/Cas9 has emerged as a powerful system for engineering and studying biology. Since its discovery, there has been broad interest in developing tools to better regulate its activity.  Such tools promise to mitigate off-target effects and to allow the study of more complex biological perturbations \autocite{richter2017}.  To date, this problem has been approached in several ways: by using a split-Cas9 construct \autocite{zetsche2015,nguyen2016,nihongaki2015}, incorporating unnatural caged amino acids into Cas9 \autocite{hemphill2015,luo2016}, fusing ligand-dependent localization signals to Cas9 \autocite{liuramli2016}, and inserting ligand- or light-sensitive domains into Cas9 \autocite{oakes2016,richter2016}.  These approaches, which focus on engineering Cas9 itself, are limited for applications involving gene expression (e.g. CRISPRi or CRISPRa) in that each target gene is regulated in the same manner; there is no way to independently regulate different genes.
 
 % Justify focusing on sgRNA rather than Cas9, briefly review sgRNA engineering, explain the advantages of our approach (Fig 1a).
 
@@ -56,7 +58,7 @@ Ever since CRISPR/Cas9 emerged as a powerful system for engineering and studying
 % I like this a lot better.
 %
 % ^.
-By instead engineering Cas9's guide RNA (sgRNA), it becomes trivial to independently regulate different genes.  This approach has also been explored, but not as thoroughly.  One pair of methods is based on the idea of using an aptamer to control whether the sgRNA's \nt{20} target sequence (more succinctly called the spacer) is blocked by a complementary sequence installed elsewhere in the sgRNA \autocite{liu2016,tang2017}.  Another method is based on the idea of using the sgRNA to recruit protein regulators that need to be stabilized by a ligand to avoid degradation \autocite{maji2017}.  In contrast, our goal in this study was to engineer ligand-responsive sgRNAs by using an aptamer to directly affect the interaction between the sgRNA and Cas9 (\reffig{1}a).  There are several advantages to this approach.  First, it doesn't require any host-cell machinery or exogenous protein parts (other than Cas9).  Second, because it doesn't require any complementarity to the spacer, it is compatible with the cloning strategies needed to make pooled sgRNA libraries \autocite{gilbert2014}.  Third, because it is compatible with library screening, we could optimize the dynamic range of our sensors by using fluorescence-activated cell sorting (FACS).  And fourth, we could use the same approach to produce both ligand-activated and ligand-deactivated sensors.
+By instead engineering Cas9's guide RNA (sgRNA), it becomes trivial to independently regulate different genes.  This approach has also been explored, but not as thoroughly.  One pair of methods is based on the idea of using an aptamer to control whether the sgRNA's \nt{20} target sequence (more succinctly called the spacer) is blocked by a complementary sequence installed elsewhere in the sgRNA \autocite{liu2016,tang2017}.  Another method is based on the idea of using the sgRNA to recruit protein regulators that need to be stabilized by a ligand to avoid degradation \autocite{maji2017}.  In contrast, our approach in this study was to engineer ligand-responsive sgRNAs by using an RNA aptamer to directly affect the interaction between the sgRNA and Cas9 (\reffig{1}a).  There are several advantages to this approach.  First, this method it does not require any host-cell machinery or exogenous proteins (other than Cas9).  Second, because it does not require any complementarity to the spacer sequence, it is compatible with the cloning strategies needed to make pooled sgRNA libraries \autocite{gilbert2014}.  Third, because it is compatible with library screening, we could optimize the dynamic range of our sensors by using fluorescence-activated cell sorting (FACS).  And fourth, we could use the same approach to produce both ligand-activated and ligand-deactivated sensors.
 
 \section{Results}
 
@@ -69,6 +71,11 @@ By instead engineering Cas9's guide RNA (sgRNA), it becomes trivial to independe
 %¶ All three solvent-exposed stems can be used to control the sgRNA (Fig 1b,1d,1e, Supp Tab [rational designs]).  Not enough to simply replace the stem.
 
 We began by screening 97 rational designs using an \invitro{} Cas9 cleavage assay (\refsupptab{rational-designs}) to learn which insertion sites were most sensitive to the presence of the theophylline aptamer \autocite{jenison1994}, and which strategies for linking the aptamer to the sgRNA were most effective.  Regarding insertion sites, we tried inserting the aptamer into each of the stems in \reffig{1}b, which are all solvent-exposed in the crystal structure of Cas9 in complex with sgRNA and DNA \autocite{nishimasu2014}.  Regarding linking strategies, we tried replacing different parts of each stem with the aptamer, splitting the sgRNA in half and using the aptamer to bring the halves together, and designing specific strand displacements for the \apo{} and \holo{} states.  We found functional sensors for all three insertion sites, and were most successful with the strand displacement strategy (\reffig{1}d, \refsupptab{rational-designs}).  All of these sensors could be titrated (\reffig{1}e).  We also unexpectedly learned that inserting the aptamer into the nexus region yields sensors that respond to the absence of theophylline, rather than to the presence of it.  Knowing how to design both ligand-activated and ligand-deactivated sgRNAs \invitro{}, we next sought to find sensors that would function robustly in \ecoli{}.
+% * <christina.fitzsimmons@gmail.com> 2017-12-13T03:54:39.189Z:
+% 
+% This is your first mention of theophylline. Add 1 sentence about why you chose this aptamer. 
+% 
+% ^.
 % * <kortemme@cgl.ucsf.edu> 2017-12-07T20:29:49.573Z:
 % 
 % > Escherichia coli
@@ -227,7 +234,7 @@ Screening for \ligrnaB{}: Libraries are as in \refsupptab{libraries}
 
 \subsection{Spacer assay}
 
-Choice of spacers: The spacers for this assay were chosen by a script that generated uniformly random sequences, scored them by the method of \namedcite{doench2016}, and kept only those that scored higher than 0.5 (the median).  This approach was designed to produce spacers that were as unbiased as possible, while still being likely to work well with the controls.  In fact, the average cleavage for the positive controls was 97\%, and the lowest cleavage for any of the positive controls was 78\% (\refsupptab{spacer-assay}).
+Choice of spacers: The spacers for this assay were chosen by a script that generated uniformly random sequences, scored them by the method of \namedcite{doench2016}, and kept only those that scored higher than 0.5 (the median).  This approach was designed to produce spacers that were as unbiased as possible, while still being likely to work well with the controls.  The average cleavage for the positive controls was 97\%, and the lowest cleavage for any of the positive controls was 78\% (\refsupptab{spacer-assay}).
 
 \subsection{RNA secondary structure predictions}
 
@@ -267,19 +274,26 @@ $ RNAfold --partfunc --MEA --motif \
 \section{Contributions}
 
 \begin{itemize}
-    \item KK conceived the project, performed most of the experiments, and wrote the paper.
-    \item JL performed many of the CRISPRi experiments.
+    \item KK conceived the project, performed the majority of the experiments, and wrote the paper with input from other authors.
+    \item JL performed the majority of the CRISPRi experiments.
     \item KEW proposed the mechanism for \ligrnaB{} and performed the SHAPE-Seq experiments.
     \item CMF advised on the \invitro{} Cas9 experiments.
     \item BLO advised on the FACS screens.
     \item CF tested the ligRNAs in mammalian cells.
     \item AHN and BMH tested the ligRNAs in yeast cells.
     \item DFS, JAD, HES, and TK provided mentorship.
+	\item All authors reviewed and approved the manuscript. 
 \end{itemize}
 
 \section{Acknowledgments}
 
-The authors would like to thank Anna Simon for presenting the ideas that motivated this project, Kianna Zucker for cloning most of the constructs used in \reffig{2}d, and Kyle Barlow and Anum Glasgow for helping with miscellaneous experiments.
+The authors would like to thank Anna Simon for presenting the ideas that motivated this project, Kianna Zucker for cloning constructs used in \reffig{2}d, and Kyle Barlow and Anum Glasgow for technical experimental assistance.  
+
+% * <christina.fitzsimmons@gmail.com> 2017-12-13T03:15:51.947Z:
+% 
+% Funding sources? 
+% 
+% ^.
 
 \section{Figures}
 
