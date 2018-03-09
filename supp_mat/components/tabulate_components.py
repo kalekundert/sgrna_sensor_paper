@@ -14,10 +14,14 @@ context = {
         ('Theophylline aptamer', aptamer('theo')),
         ('3-Methylxanthine aptamer', aptamer('3mx')),
         ('Positive control', from_name('on')),
-        (r'Negative control \autocite{briner2014}', from_name('off')),
+        (r'Negative control', from_name('off')),
         (r'\ligrnaF{}', from_name('mhf/30')),
-        (r'\ligrnaFF{}', from_name('mhf/37')),
+        (r'\ligrnaF[2]{}', from_name('mhf/37')),
+        (r'\ligrnaF[3]{}', from_name('w30/65')),
+        (r'\ligrnaF[4]{}', from_name('w30/64/1')),
         (r'\ligrnaB{}', from_name('rxb/11/1')),
+        (r'\ligrnaB[2]{}', from_name('w11/2')),
+        (r'\ligrnaB[3]{}', from_name('m11/ga')),
     ]
 }
 

@@ -3,7 +3,7 @@
 Name & Sequence \\
 \midrule
 {% for name, seq in components -%}
-    {{ name }} & \texttt{{ '{' }}{{ seq.dna }}{{ '}' }} \\
+    {{ name }} & \texttt{{ '{' }}{{ seq.dna | upper }}{{ '}' }} \\
 {% endfor -%}
 \bottomrule
 \end{tabular}
