@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
+import yaml
 from sgrna_sensor import from_name, t7_promoter as t7, spacer, aptamer
 from sgrna_sensor import render_latex_table
 
-context = {
-    'components': [
+components = [
         ('T7 promoter', t7()),
         ('AAVS spacer', spacer('aavs')),
         ('G1 spacer', spacer('gfp1')),
@@ -22,8 +22,10 @@ context = {
         (r'\ligrnaB{}', from_name('rxb/11/1')),
         (r'\ligrnaB[2]{}', from_name('w11/2')),
         (r'\ligrnaB[3]{}', from_name('m11/ga')),
-    ]
-}
+]
 
-render_latex_table('components.tex', context)
+with open('manual_alignments.yml') as file:
+    manual_alignments = yaml.load(file)
+
+render_latex_table('components.tex', locals())
 
