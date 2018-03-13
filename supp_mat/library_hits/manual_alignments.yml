@@ -1,0 +1,96 @@
+rbf/6:   \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--AAGG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CUUUAGC-|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/8:   \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|-CCCGA|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|UCUUCGC-|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/13:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--AUCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CGGCUU--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/26:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--UAGG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CUGCUCGC|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/39:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|-ACCUG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CUGUAGA-|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/40:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|-CCGAG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CCAGUCU-|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/47:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--CCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CGAGAGCU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/50:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|-CGCGG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CCUAGG--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/51:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|-GCUGA|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|UCGGGCU-|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/53:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--CGUG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CUUAUGC-|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/56:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--UCGC|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|GCCUGC--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/68:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--CCAG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CUGCCAGC|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/74:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--AUCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CGCUGCUU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/99:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--GCGG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CCGGGCUU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/109: \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--ACGG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CCGGGCAU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/134: \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|--AUAG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CAGCAGC-|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbf/161: \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|UGUGAG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CUCGGC--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbb/4:   \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|AAGCUG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CGGCGC--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbb/15:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|-CCCUA|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|UGGGGU--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbb/27:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GCGCUG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|CGUCGC--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbb/29:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GUCUGU|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|AUAGAU--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbb/39:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|ACCUGC|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|GUAGGU--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbb/42:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|-ACCUC|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|GUGGU---|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rbb/45:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|-CCCCC|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfblue}\verb|GGGGGU--|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/2:   \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGGGA|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|UCUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/11:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GUGGG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|CCUAC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/14:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GAAGG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|CUUUC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/22:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGUG-|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|CAUCU|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/39:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGGGA|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|UCUUC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/44:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGGGA|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|UUUGC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/51:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GCCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|CGAGU|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/91:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGGAA|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|-UUCC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rxb/94:  \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUAGAAAUAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GUG--|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfnavy}\verb|--CAC|\color{ucsforange}\verb|GUUAUCA|\color{ucsfteal}\verb|ACUUGAAAAAGU|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+rhf/6:   \color{ucsforange}\verb|GUUUUA|\color{ucsfblue}\verb|GAGCUA-----GAAA-----UAGCAAGU|\color{ucsforange}\verb|UAAAAUAA|\color{ucsfnavy}\verb|GGCUAGUCC|\color{ucsforange}\verb|CUU-UUC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/3:   \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGCGGUCCC|\color{ucsforange}\verb|GUCAUCA|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/4:   \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUUGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGACGAACC|\color{ucsforange}\verb|GUAAUCC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/7:   \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUUUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGUCUGACC|\color{ucsforange}\verb|AGA-UCC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/13:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUUUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGUGACACC|\color{ucsforange}\verb|GCA-UCC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/16:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGUGGUACC|\color{ucsforange}\verb|AUA-UCC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/20:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGUAAACCC|\color{ucsforange}\verb|CUCAUCA|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/21:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUGGAAACAGAAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGAUCCUCC|\color{ucsforange}\verb|CGCAUGC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/25:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGACGUCCC|\color{ucsforange}\verb|GCA-UUC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/26:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUGGAAACAGUAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGUUCGUCC|\color{ucsforange}\verb|GCCAUUC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/30:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGGUGUCCC|\color{ucsforange}\verb|GUA-UAC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/35:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUACUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGGCACUCC|\color{ucsforange}\verb|UAA-UCC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/37:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGC-AUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGUCUUCCC|\color{ucsforange}\verb|CGCAUCC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/38:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCCAUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGACGGUCC|\color{ucsforange}\verb|CGCAUCC|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+mhf/41:  \color{ucsforange}\verb|GUUUCA|\color{ucsfblue}\verb|GAGCUAUGCUGGAAACAGCAUAGCAAGU|\color{ucsforange}\verb|UGAAAUAA|\color{ucsfnavy}\verb|GGACUCUCC|\color{ucsforange}\verb|GUA-UCG|\color{ucsfteal}\verb|GCCG|\color{ucsfpurple}\verb|AUACCAGCCGAAAGGCCCUUGGCAG|\color{ucsfteal}\verb|CGAC|\color{ucsforange}\verb|GGCACCGAGUCGGUGCUUUUUU|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

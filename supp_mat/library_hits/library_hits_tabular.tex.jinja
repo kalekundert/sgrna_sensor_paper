@@ -1,0 +1,33 @@
+\begin{tabular}{lrrrrrrl}
+\toprule
+
+&
+&
+&
+\multicolumn{4}{c}{Fold Change} &
+\\
+\cmidrule(r){4-7}
+
+Name &
+Picks &
+Counts &
+\multicolumn{1}{c}{G1} &
+\multicolumn{1}{c}{G2} &
+\multicolumn{1}{c}{R1} &
+\multicolumn{1}{c}{R2} &
+Sequence \\
+\midrule
+{% set NA = '\multicolumn{1}{c}{---}' %}
+{% for hit in hits %}
+ % {{ hit }}
+ {{ names.get(hit, '') }} &
+ {{ libraries.get(hit) }} &
+ {{ '{}/{}'.format(*counts[hit]) }} &
+ {{ fold_change_strs.get('g1/%s' % hit, NA) }} &
+ {{ fold_change_strs.get('g2/%s' % hit, NA) }} &
+ {{ fold_change_strs.get('r1/%s' % hit, NA) }} &
+ {{ fold_change_strs.get('r2/%s' % hit, NA) }} &
+ {{ manual_alignments[hit] }} \\
+{% endfor %}
+\bottomrule
+\end{tabular}
