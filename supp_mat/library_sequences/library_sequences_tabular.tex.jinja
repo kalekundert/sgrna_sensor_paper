@@ -6,10 +6,12 @@ Size &
 Sequence \\
 \midrule
 {% for i, row in df.iterrows() -%}
+ % {{ row['name'] }}
  {{ row.id }} &
  {{ row.domain }} &
  4\textsuperscript{{ '{%.0f}' % row.log4_complexity }} &
- \verb|{{ row.sequence }}| \\
+ {{ row.manual_alignment }} \\
+ {{ '\\midrule' if row['name'] in midrules else '' }}
 {% endfor -%}
 \bottomrule
 \end{tabular}
