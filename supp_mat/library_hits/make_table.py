@@ -7,23 +7,6 @@ import sgrna_sensor
 import analysis_helpers
 from pathlib import Path
 
-# Manually make list of all the hits
-#
-# Columns:
-# - id?
-# - name (for those that are ligRNAs)
-# - ligand activated?
-# - library (index in table LIBRARIES, manually provided, preferably as range 
-#   to indicate pooling, e.g. 5--10)
-# - # of times picked (manually provided)
-# - fold changes (G1, G2, R1, R2) (will be missing a lot of data)
-# - sequence
-#
-# Caption:
-# - Note that all rxb isolates retain U and have perfect base pairing.
-# - Note that rbf designs were selected with GFP spacer, and totally fail with 
-#   RFP spacer.
-
 # I got the list of hits by copying the `linkers` dictionaries from the 
 # functions representing hits in `analysis/sgrna_sensor/designs.py`
 hits = [
@@ -83,9 +66,9 @@ hits = [
 
 # LaTeX names for the designs that are described in the paper.
 names = {
-        'rxb/11': r'\ligrnaB{}',
-        'mhf/30': r'\ligrnaF{}',
-        'mhf/37': r'\ligrnaF[2]{}',
+        'rxb/11': r"see note*",
+        'mhf/30': r"\ligrnaF{}",
+        'mhf/37': r"\ligrnaF[2]{}",
 }
 
 
@@ -201,6 +184,14 @@ libraries = {
         'mhf/37': '29--30',
         'mhf/38': '29--30',
         'mhf/41': '29--30',
+}
+
+
+midrules = {
+        'rbf/134': True,
+        'rbb/45': True,
+        'rxb/94': True,
+        'rhf/6': True,
 }
 
 

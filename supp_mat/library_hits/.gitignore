@@ -2,3 +2,4 @@ fold_changes.json
 *.log
 *.pdf
 library_hits_tabular.tex
+__pycache__

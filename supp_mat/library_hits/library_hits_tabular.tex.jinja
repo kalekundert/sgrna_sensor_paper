@@ -9,12 +9,12 @@
 \cmidrule(r){4-7}
 
 Name &
+Library &
 Picks &
-Counts &
-\multicolumn{1}{c}{G1} &
-\multicolumn{1}{c}{G2} &
-\multicolumn{1}{c}{R1} &
-\multicolumn{1}{c}{R2} &
+\multicolumn{1}{c}{\color{ucsfolive}G1} &
+\multicolumn{1}{c}{\color{ucsfolive}G2} &
+\multicolumn{1}{c}{\color{ucsfred}R1} &
+\multicolumn{1}{c}{\color{ucsfred}R2} &
 Sequence \\
 \midrule
 {% set NA = '\multicolumn{1}{c}{---}' %}
@@ -28,6 +28,7 @@ Sequence \\
  {{ fold_change_strs.get('r1/%s' % hit, NA) }} &
  {{ fold_change_strs.get('r2/%s' % hit, NA) }} &
  {{ manual_alignments[hit] }} \\
+ {{ '\\midrule' if midrules.get(hit) else '' }}
 {% endfor %}
 \bottomrule
 \end{tabular}
