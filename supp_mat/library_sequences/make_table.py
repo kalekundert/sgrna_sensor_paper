@@ -56,6 +56,19 @@ def tabulate_sequences():
         row['log4_complexity'] = math.log(row['complexity'], 4)
         rows.append(row)
 
+        if manual_alignment:
+            real_seq = row['sequence']
+            aligned_seq = ''.join(
+                    x for x in row['manual_alignment']
+                    if x in 'ACGTN')
+
+            if real_seq != aligned_seq:
+                raise ValueError(f"""\
+Alignment for {name} has the wrong sequence:
+
+> {real_seq}
+> {aligned_seq} """)
+
     return pd.DataFrame(rows)
 
 def name_to_domain(name):
