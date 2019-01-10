@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage[papersize={14in,9in}]{geometry}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\usepackage{fontspec}
+\setmainfont{Liberation Sans}
+\newfontfamily{\dingbatsfont}{DejaVu Sans}
+
+\usepackage[Dingbats]{ucharclasses}
+\setTransitionsForSymbols{\dingbatsfont}{}
+
+\newcommand\ligrnaF[1][]{ligRNA\textsuperscript{+}\textsubscript{#1}}
+\newcommand\ligrnaB[1][]{ligRNA\textsuperscript{−}\textsubscript{#1}}
+
+\begin{document}
+
+\begin{table}
+\centering
+\input{qpcr_primers_tabular}
+\end{table}
+
+\end{document}

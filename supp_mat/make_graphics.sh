@@ -10,11 +10,6 @@ function predict_spacer_quality () {(
 
 predict_spacer_quality
 
-fcm fold_change 20160304_combined_rational_designs_with_paper_labels.yml \
-    -o in_vitro_in_vivo.pdf \
-    -d 6e-4,6e0 \
-    -p
-
 fcm fold_change 20171010_compare_promoters.yml \
     -o graphics/j23150.svg \
     -I \

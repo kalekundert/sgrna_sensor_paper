@@ -1,0 +1,37 @@
+\begin{tabular}{lrrrrrrrl}
+\toprule
+
+&
+&
+&
+&
+\multicolumn{4}{c}{Fold Change} &
+\\
+\cmidrule(r){5-8}
+
+Name &
+Library &
+Picks &
+Ligand &
+\multicolumn{1}{c}{\color{ucsfolive}sgG1} &
+\multicolumn{1}{c}{\color{ucsfolive}sgG2} &
+\multicolumn{1}{c}{\color{ucsfred}sgR1} &
+\multicolumn{1}{c}{\color{ucsfred}sgR2} &
+Sequence \\
+\midrule
+{% set NA = '\multicolumn{1}{c}{---}' %}
+{% for hit in hits %}
+ % {{ hit }}
+ {{ names.get(hit, '') }} &
+ {{ libraries.get(hit, '---') }} &
+ {{ '{}/{}'.format(*counts[hit]) if hit in counts else '---' }} &
+ {{ ligands[hit] }} &
+ {{ fold_change_strs.get('g1/%s' % hit, NA) }} &
+ {{ fold_change_strs.get('g2/%s' % hit, NA) }} &
+ {{ fold_change_strs.get('r1/%s' % hit, NA) }} &
+ {{ fold_change_strs.get('r2/%s' % hit, NA) }} &
+ {{ manual_alignments[hit] }} \\
+ {{ '\\midrule' if midrules.get(hit) else '' }}
+{% endfor %}
+\bottomrule
+\end{tabular}

@@ -1,0 +1,31 @@
+\documentclass{article}
+
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{fontspec}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{nopageno}
+\usepackage{tabularx}
+
+% Use Liberation Sans by default, since that's usually what journals want.  Use 
+% DejaVu Sans to handle weird characters (e.g. checkmarks, etc.)
+\usepackage{fontspec}
+\setmainfont{LiberationSans}
+\setsansfont{LiberationSans}
+\setmonofont{LiberationMono}
+\newfontfamily{\dingbatsfont}{DejaVu Sans}
+\usepackage[Dingbats]{ucharclasses}
+\setTransitionsForSymbols{\dingbatsfont}{}
+
+% Let the user provide a custom preamble, if necessary.
+\IfFileExists{./preamble.tex}{\input{preamble}}{}
+
+\begin{document}
+
+\begin{adjustbox}{max size={\textwidth}{\textheight},center=\textwidth}
+\input{library_sequences_tabular}
+\end{adjustbox}
+
+\end{document}
