@@ -3,16 +3,15 @@ set -euxo pipefail
 
 mkdir -p graphics
 
-function fcm () {(
-    # <script name> <yaml file> [<other args>...]
-    fcm=$(realpath ../../../flow_cytometry)
+notebook=../../../notebook
+lacz=$notebook/20180621_target_endogenous_loci
+pa14=$notebook/20180711_test_ligrnas_in_pseudomonas_aeruginosa
 
-    cd graphics
-    $fcm/$1.py $fcm/data/$2 "${@:3}" -Io '$.svg'
-)}
+$lacz/miller_units.py \
+  $lacz/plate_reader/20180809_target_lac.toml \
+  $lacz/plate_reader/20180810_target_lac.toml \
+  $lacz/plate_reader/20180813_target_lac.toml \
+  --output 20180809_target_lac_triplicate \
+  --figure-mode 
 
-#fcm bar_chart 20170706_theo_3mx.yml -y0.11 -O4x3
-
-fcm bar_chart 20170831_multiplex_timecourse_theo_3mx.yml -O6x3 -y1.0
-fcm bar_chart 20170831_multiplex_timecourse_3mx.yml -O6x3 -y1.0
-
+#$pa14/plot_ligrna.py -o graphics/20180711_test_ligrnas_in_pa14.svg
