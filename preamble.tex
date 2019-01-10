@@ -7,6 +7,8 @@
 \usepackage{caption}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{nopageno}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{multirow}
@@ -26,6 +28,12 @@ UprightFont    = *-Regular,
 BoldFont       = *-Bold,
 ItalicFont     = *-Italic,
 BoldItalicFont = *-BoldItalic]
+\newfontfamily{\dingbatsfont}{DejaVu Sans}
+
+% Use DejaVu Sans for symbol characters (namely checkmarks) because 
+% Liberation Sans doesn't have these characters..
+\usepackage[Dingbats]{ucharclasses}
+\setTransitionsForSymbols{\dingbatsfont}{}
 
 % Use the same font in equations as in the main text
 \usepackage{mathastext}
@@ -50,10 +58,24 @@ BoldItalicFont = *-BoldItalic]
 % Don't number sections.
 \setcounter{secnumdepth}{0}
 
+% Define the UCSF colors.
+\usepackage{xcolor}
+\definecolor{ucsfnavy}{RGB}{  0  32  73}
+\definecolor{ucsfteal}{RGB}{ 24 163 172}
+\definecolor{ucsfolive}{RGB}{144 189  49}
+\definecolor{ucsfblue}{RGB}{ 23 140 203}
+\definecolor{ucsforange}{RGB}{244 128  36}
+\definecolor{ucsfpurple}{RGB}{113 111 178}
+\definecolor{ucsfred}{RGB}{236  24  72}
+\definecolor{ucsfyellow}{RGB}{255 221   0}
+\definecolor{ucsfmagenta}{RGB}{174  67 125}
+\definecolor{ucsfblack}{RGB}{  0   0   0}
+\definecolor{ucsfdarkgrey}{RGB}{180 185 191}
+\definecolor{ucsflightgrey}{RGB}{209 211 211}
+
 % Define a bunch of useful aliases.
-\newcommand\ligrnaF{ligRNA\textsuperscript{+}}
-\newcommand\ligrnaFF{ligRNA$^{\textrm{+}}_{\textrm{2}}$}
-\newcommand\ligrnaB{ligRNA\textsuperscript{−}}
+\newcommand\ligrnaF[2][]{ligRNA\textsuperscript{+#2}\textsubscript{#1}}
+\newcommand\ligrnaB[2][]{ligRNA\textsuperscript{−#2}\textsubscript{#1}}
 \newcommand\captitle[1]{\emph{#1}}
 \newcommand\seq[1]{\seqsplit{\texttt{#1}}}
 \newcommand\code[1]{\texttt{#1}}
@@ -165,6 +187,17 @@ BoldItalicFont = *-BoldItalic]
 \newcommand\tabtwocol[1]{%
  {\singlespacing%
  \begin{adjustbox}{width=7in,center=\textwidth}%
+   \input{#1}%
+ \end{adjustbox}%
+ }
+}
+\newcommand\tabsideways[1]{%
+ {\singlespacing%
+ % Neat trick to fill to the end of the page:
+ %   \dimexpr\pagegoal-\pagetotal-\baselineskip\relax
+ % I'm not using it because it seems to let the section header float down from 
+ % the top of the page.
+ \begin{adjustbox}{angle=90,max size={\textwidth}{9in},center=\textwidth}%
    \input{#1}%
  \end{adjustbox}%
  }

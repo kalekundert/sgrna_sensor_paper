@@ -16,7 +16,7 @@
 *.xref
 *~
 
-*.svg
+*.docx
 *.ps
 *.eps
 *.tif
@@ -24,10 +24,14 @@
 *.png
 *.jpg
 *.dna
+*.pdf
 
-/*.pdf
 /fcm.sh
 /paper.tex
 /sandbox
 /build
 /examples
+/peer_review
+/addgene
+
+graphics

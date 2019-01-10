@@ -1,5 +1,5 @@
 BUILD := build
-SLUG := sgrna_paper
+SLUG := sgrna_figures
 LATEX := xelatex --halt-on-error --output-directory $(BUILD)
 BIBER := biber --output-directory $(BUILD)
 
@@ -17,6 +17,9 @@ FIGURES := \
 BIBLIOGRAPHIES := \
 	curated_refs.bib \
 	uncurated_refs.bib \
+
+figures :
+	$(LATEX) sgrna_figures
 
 $(BUILD)/$(SLUG).pdf: $(SLUG).tex $(PREAMBLE) $(FIGURES) $(BUILD)/$(SLUG).bbl Makefile
 	$(LATEX) $< 
