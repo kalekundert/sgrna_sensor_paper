@@ -1,0 +1,17 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{gather*}
+\mu[\Delta C_q] = & \mu[C_q,\textrm{GFP}] - \mu[C_q,\textrm{16S}]
+\\
+\sigma[\Delta C_q] = & \sqrt{
+  \sigma[C_q,\textrm{GFP}]^2 +
+  \sigma[C_q,\textrm{16S}]^2 }
+\\
+\textrm{GFP mRNA} = & 2^{- \mu[\Delta C_q] \pm \sigma[\Delta C_q]}
+\end{gather*}
+
+\end{document}
