@@ -97,17 +97,17 @@ names = {
         'mhf/30': r"\ligrnaF{}",
         'mhf/37': r"\ligrnaF[2]{}",
 
-        'tpp/uhf/8':   r"Fig S?: 8",
-        'tpp/uhf/30':  r"Fig S?: 30",
-        'tpp/uhf/37':  r"Fig S?: 37",
-        'tpp/uhf/49':  r"Fig S?: 49",
-        'tpp/uhf/66':  r"Fig S?: 66",
-        'tpp/uhf/71':  r"Fig S?: 71",
-        'tpp/uhf/84':  r"Fig S?: 84",
-        'tpp/uhf/132': r"Fig S?: 132",
-        'tpp/uhf/135': r"Fig S?: 135",
-        'tpp/uhf/160': r"Fig S?: 160",
-        'tpp/uhf/174': r"Fig S?: 174",
+        'tpp/uhf/8':   r"Fig S11: 8",
+        'tpp/uhf/30':  r"Fig S11: 30",
+        'tpp/uhf/37':  r"Fig S11: 37",
+        'tpp/uhf/49':  r"Fig S11: 49",
+        'tpp/uhf/66':  r"Fig S11: 66",
+        'tpp/uhf/71':  r"Fig S11: 71",
+        'tpp/uhf/84':  r"Fig S11: 84",
+        'tpp/uhf/132': r"Fig S11: 132",
+        'tpp/uhf/135': r"Fig S11: 135",
+        'tpp/uhf/160': r"Fig S11: 160",
+        'tpp/uhf/174': r"Fig S11: 174",
 }
 
 # I got the counts by counting the entries in the `aliases` dictionaries from 
