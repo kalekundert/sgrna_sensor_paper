@@ -15,7 +15,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg5556"
    version="1.1"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="sgrna_icon.svg">
   <sodipodi:namedview
      id="base"
@@ -28,7 +28,7 @@
      inkscape:cx="375"
      inkscape:cy="520"
      inkscape:document-units="px"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="g5214"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -537,16 +537,16 @@
        style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#002049;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5327-2-3-2" />
     <image
-       sodipodi:absref="/home/kale/sgrna/paper/figure_1/cas9.png"
+       sodipodi:absref="/home/kale/sgrna/documents/paper/figure_1/cas9.png"
        xlink:href="cas9.png"
-       style="display:inline"
-       y="119.04401"
-       x="-341.56677"
-       id="image6265"
-       preserveAspectRatio="none"
-       height="90.472557"
+       transform="scale(-1,1)"
        width="120.63008"
-       transform="scale(-1,1)" />
+       height="90.472557"
+       preserveAspectRatio="none"
+       id="image6265"
+       x="-341.56677"
+       y="119.04401"
+       style="display:inline" />
     <g
        style="opacity:0.55699978"
        id="g6459">
@@ -1210,7 +1210,7 @@
      inkscape:label="flat / stems"
      inkscape:groupmode="layer"
      id="g5214"
-     style="display:none">
+     style="display:inline">
     <path
        sodipodi:nodetypes="ccssccscccc"
        inkscape:connector-curvature="0"
@@ -1241,24 +1241,6 @@
        d="m 105.46652,178.86435 -34.96199,0.004"
        style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#f48024;stroke-width:2.50031257;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5180-3" />
-    <path
-       id="path6097"
-       style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#f48024;stroke-width:2.5;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 113.86114,178.86435 5.12375,0.004"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       d="m 146.89715,178.86435 -19.32327,0.004"
-       style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#f48024;stroke-width:2.5;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path6099" />
-    <path
-       id="path6101"
-       style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#f48024;stroke-width:2.5;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 155.28799,178.86435 4.52005,0.004"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
     <g
        id="g6457">
       <path
@@ -1496,7 +1478,7 @@
        id="path4413-1-7-3-6-6" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="g6461"
      inkscape:groupmode="layer"
      inkscape:label="flat / wt">
@@ -1508,7 +1490,7 @@
        id="path6485" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="flat / boxes"
      id="layer5"
      inkscape:groupmode="layer">
