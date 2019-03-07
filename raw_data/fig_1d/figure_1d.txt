@@ -1,0 +1,5 @@
+Raw gel image for Figure 1d.  The image in the main figure was inverted, 
+cropped to remove some less-active designs, and reordered to put the designs in 
+numerical order.  Lanes 1-8 correspond exactly to the main figure.  Lanes 13-16 
+correspond to designs #24 and #25, lanes 11-12 correspond to design #61, and 
+lanes 19-20 correspond to design #85.

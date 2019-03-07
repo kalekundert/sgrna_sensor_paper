@@ -1,0 +1,7 @@
+Raw gel image for Figure 1e.  The image in the main text figure was inverted 
+and cropped to remove the four left-most lanes.  The three right-most of these 
+continued the 2x serial dilution of theophylline (e.g.  4.88, 2.44, and 1.22 
+µM).  The left-most of these had no theophylline (e.g. 0 µM).  The ladder is 
+GeneRuler 1kb (Thermo SM0312), with bright bands at 1 kb (bottom), 3 kb, and 6 
+kb (top).  In the remaining lanes, the slower band is uncut target DNA (4347 
+bp), and the faster band is cut DNA (2162 bp and 2185bp).
